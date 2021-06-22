@@ -1,35 +1,37 @@
 const { Model, DataTypes } = require('sequelize');
 const sequelize = require('../config/connection');
 
-class Comment extends Model {};
+class UserPark extends Model {};
 
-Comment.init(
+UserPark.init(
   {
     id: {
       type: DataTypes.INTEGER,
       allowNull: false,
-      primaryKey: true,
-      autoIncrement: true,
+      primaryKey: true
     },
     user_id: {
       type: DataTypes.INTEGER,
       allowNull: false,
       references: {
-        model: 'user',
-        key: 'id',
+        model: "user",
+        key: "id"
       },
     },
-    visit_id: {
+    park_id: {
       type: DataTypes.INTEGER,
       allowNull: false,
       references: {
-        model: 'visit',
-        key: 'id',
+        model: "park",
+        key: "id"
       },
     },
-    body: {
-      type: DataTypes.TEXT,
+    visit_status: {
+      type: DataTypes.STRING,
       allowNull: false
+    },
+    rating: {
+      type: DataTypes.INTEGER
     }
   },
   {
@@ -37,8 +39,8 @@ Comment.init(
     timestamps: false,
     freezeTableName: true,
     underscored: true,
-    modelName: 'comment',
+    modelName: 'userpark',
   }
 );
 
-module.exports = Comment;
+module.exports = UserPark;

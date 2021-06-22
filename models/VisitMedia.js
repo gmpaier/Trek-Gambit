@@ -1,17 +1,25 @@
 const { Model, DataTypes } = require('sequelize');
 const sequelize = require('../config/connection');
 
-class Park extends Model {};
+class VisitMedia extends Model {};
 
-Park.init(
+VisitMedia.init(
   {
     id: {
       type: DataTypes.INTEGER,
       allowNull: false,
       primaryKey: true
     },
-    name: {
-      type: DataTypes.STRING,
+    visit_id: {
+      type: DataTypes.INTEGER,
+      allowNull: false,
+      references: {
+        model: 'visit',
+        key: 'id',
+      },
+    },
+    img_url: {
+      type: DataTypes.TEXT,
       allowNull: false
     }
   },
@@ -20,8 +28,8 @@ Park.init(
     timestamps: false,
     freezeTableName: true,
     underscored: true,
-    modelName: 'park',
+    modelName: 'visitmedia',
   }
 );
 
-module.exports = Park;
+module.exports = VisitMedia;

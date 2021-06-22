@@ -1,14 +1,15 @@
 const { Model, DataTypes } = require('sequelize');
 const sequelize = require('../config/connection');
 
-class Park extends Model {};
+class Activity extends Model {};
 
-Park.init(
+Activity.init(
   {
     id: {
       type: DataTypes.INTEGER,
       allowNull: false,
-      primaryKey: true
+      primaryKey: true,
+      autoIncrement: true,
     },
     name: {
       type: DataTypes.STRING,
@@ -20,8 +21,8 @@ Park.init(
     timestamps: false,
     freezeTableName: true,
     underscored: true,
-    modelName: 'park',
+    modelName: 'activity',
   }
 );
 
-module.exports = Park;
+module.exports = Activity;
