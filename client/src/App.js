@@ -1,5 +1,6 @@
-import React from "react"
-import {BrowserRouter, Route, Switch } from "react-router-dom"
+import { HashRouter as Router, Route, Switch } from "react-router-dom";
+import Nav from "./components/Nav";
+import Splash from "./components/Splash";
 import './App.css';
 import Home from "./pages/Home";
 
@@ -13,8 +14,9 @@ import Search from "./pages/Search";
 
 function App() {
   return (
+
     <BrowserRouter>
-    {/* <NavBar /> */}
+    <Nav />
       <Switch >
         <Route path = "/home" component = {Home}/>
         {/* <Route path = "/login" component = {Login} /> */}
@@ -25,6 +27,7 @@ function App() {
         {/* <Route path = "/leaderboard" component = {Leaderboard} */}
       </Switch>
     </BrowserRouter>
+
   );
 }
 
