@@ -1,0 +1,3 @@
+DROP DATABASE IF EXISTS natpark_db;
+
+CREATE DATABASE natpark_db;
