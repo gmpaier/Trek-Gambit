@@ -1,5 +1,7 @@
-import React from "react"
-import {BrowserRouter, Route, Switch } from "react-router-dom"
+// import logo from './logo.svg';
+import { HashRouter as Router, Route, Switch } from "react-router-dom";
+import Nav from "./components/Nav";
+import Splash from "./components/Splash";
 import './App.css';
 import Home from "./components/Home";
 // import login from "./components/Login.js"
@@ -11,18 +13,12 @@ import Home from "./components/Home";
 
 function App() {
   return (
-    <BrowserRouter>
-    {/* <NavBar /> */}
-      <Switch >
-        <Route path = "/" component = {Home} exact/>
-        {/* <Route path = "/login" component = {Login} /> */}
-        {/* <Route path = "/random" component = {Random} /> */}
-        {/* <Route path = "/search" component = {Search} /> */}
-        {/* <Route path = "/park" component = {Park} /> */}
-        {/* <Route path = "/compare" component = {ParkOrNot} />  */}
-        {/* <Route path = "/leaderboard" component = {Leaderboard} */}
-      </Switch>
-    </BrowserRouter>
+    <Router basename = {process.env.PUBLIC_URL}>
+      <Nav />
+        <Switch>
+          <Route component = {Splash} path = "/" exact />
+        </Switch>
+    </Router>
   );
 }
 
