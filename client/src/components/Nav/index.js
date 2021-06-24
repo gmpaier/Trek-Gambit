@@ -1,5 +1,6 @@
 import React from "react";
 import "./style.css";
+import { NavLink } from "react-router-dom";
 
 function Nav() {
     return (
@@ -7,12 +8,30 @@ function Nav() {
         <div className="container">
           <div className="row-cols-auto">
             <div className="navbar" id="navbarNav">
-              <a href="" className="navbar-brand">
+              <NavLink 
+              to = "/home"
+              className = "nav-link"
+              >
                 Home
-              </a>
-              <a href="" className="nav-link">Text</a>
-              <a href="" className="nav-link">Text</a>
-              <a href="" className="nav-link">Text</a>
+              </NavLink>
+              <NavLink 
+              to = "/search"
+              className = "nav-link"
+              >
+                Search
+              </NavLink>
+              <NavLink 
+              to = "/development"
+              className = "nav-link"
+              >
+                Random
+              </NavLink>
+              <NavLink 
+              to = "/development"
+              className = "nav-link"
+              >
+                Park Or Not
+              </NavLink>
             </div>
           </div>
         </div>
