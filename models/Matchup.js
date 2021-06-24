@@ -1,7 +1,7 @@
 const { Model, DataTypes } = require('sequelize');
 const sequelize = require('../config/connection');
 
-class Matchup extends Class {};
+class Matchup extends Model {};
 
 Matchup.init(
   {
