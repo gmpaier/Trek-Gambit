@@ -9,54 +9,57 @@ import Jumbotron from "../components/Jumbotron";
 class Parksearch extends Component {
     state = {
         search: "",
-        books: [],
+        parks: [],
         error: "",
         message: ""
     };
-
 
     handleInputChange = event => {
         this.setState({ search: event.target.value })
     }
 
-
     handleFormSubmit = event => {
         event.preventDefault();
-        API.getGoogleSearchBooks(this.state.search)
+        API.getNationalPark(this.state.search)
             .then(res => {
-                if (res.data.items === "error") {
-                    throw new Error(res.data.items);
+                if (res.data.data === "error") {
+                    throw new Error(res.data.data);
                 }
                 else {
-                    let results = res.data.items
+                    let results = res.data.data
+                    console.log(results[0])
                     results = results.map(result => {
                         result = {
                             key: result.id,
                             id: result.id,
-                            title: result.volumeInfo.title,
-                            author: result.volumeInfo.authors,
-                            description: result.volumeInfo.description,
-                            image: result.volumeInfo.imageLinks.thumbnail,
-                            link: result.volumeInfo.infoLink
+                            states: result.states,
+                            fullName: result.fullName,
+                            parkCode: result.parkCode,
+                            image: result.images[0].url,
+                            description: result.description,
+                            url: result.url
                         }
                         return result;
                     })
                     
-                    this.setState({ books: results, error: "" })
+                    this.setState({ parks: results, error: "" })
+                    console.log(this.state.parks)
                 }
             })
-            .catch(err => this.setState({ error: err.items }));
+            .catch(err => this.setState({ error: err.items } ));
     }
 
     handleSavedButton = event => {
         event.preventDefault();
-        console.log(this.state.books)
-        let savedBooks = this.state.books.filter(book => book.id === event.target.id)
-        savedBooks = savedBooks[0];
-        API.saveBook(savedBooks)
+        console.log(this.state.parks)
+        let savedParks = this.state.filter(park => park.id === event.target.id)
+        savedParks = savedParks[0];
+        API.savePark(savedParks)
             .then(this.setState())
+            .then(console.log(this.state.parks))
             .catch(err => console.log(err))
     }
+    
     render() {
         return (
             <Container fluid>
@@ -73,7 +76,7 @@ class Parksearch extends Component {
                 </Container>
                 <br></br>
                 <Container>
-                    <SearchList books={this.state.books} handleSavedButton={this.handleSavedButton} />
+                    <SearchList parks = {this.state.parks} handleSavedButton={this.handleSavedButton} />
                 </Container>
             </Container>
         )
