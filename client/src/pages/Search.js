@@ -49,7 +49,7 @@ class Parksearch extends Component {
             .catch(err => this.setState({ error: err.items } ));
     }
 
-    handleSavedButton = event => {
+    handleParkButton = event => {
         event.preventDefault();
         console.log(this.state.parks)
         let savedParks = this.state.filter(park => park.id === event.target.id)

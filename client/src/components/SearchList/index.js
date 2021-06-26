@@ -9,7 +9,7 @@ const SearchList = props => {
         <div className="card-main">
             <div className="card-body player">
                 <div className="article">
-                    <h3>Sharks Found</h3>
+                    <h3>Parks Found</h3>
                 </div>
             </div>
         </div>
@@ -46,15 +46,13 @@ const SearchList = props => {
 
                                             <button className="btn btn-secondary btn-lg">
                                             <a href={park.url} target="_blank" rel="noopener noreferrer">
-                                                    View Online
+                                                View Online
                                             </a>
                                             </button>
 
 
-                                            <button className="btn btn-secondary btn-lg ">
-                                            <a href={park.url} target="_blank" rel="noopener noreferrer">
-                                                    View Online
-                                            </a>
+                                            <button className="btn btn-secondary btn-lg " id = {park.id} onClick = {(event) => props.handleParkButton(event)} >
+                                                View Park
                                             </button> 
                                         </Col>
                                     </li>
