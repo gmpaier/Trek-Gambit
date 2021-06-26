@@ -3,22 +3,24 @@ import { Row, Col } from "../Grid";
 import "./SearchList.css";
 
 const SearchList = props => {
+
     console.log(props);
     return (props.parks.length === 0) ? (
-        <div className="card">
+        <div className="card-main">
             <div className="card-body player">
                 <div className="article">
-                    <h3>Sharks found: </h3>
+                    <h3>Sharks Found</h3>
                 </div>
             </div>
         </div>
     ) : (
-            <div className="card">
+            <div className="card-second">
                 <div className="card-body player">
                     <div className="article">
-                        <h3>Parks found: </h3>
+
+                        <h3>Parks Found</h3>
                         {props.parks.map(park => {
-                            return (
+                           return (
                                 <section>
                                     <li className="search-list list-group-item">
                                         <Row className="SearchResult row" id={park.id + "Card"} key={park._id}>

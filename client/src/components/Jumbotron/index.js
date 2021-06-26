@@ -4,7 +4,10 @@ import "./Jumbotron.css";
 
 function Jumbotron() {
     return (
-    <div id = "banner">
+    <div className="jumbotron">
+        <br />
+        {/* <br />
+        <br /> */}
         <h1>Find Your Next Destination</h1>
     </div>
     );

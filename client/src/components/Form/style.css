@@ -1,11 +1,16 @@
 @import url("https://fonts.googleapis.com/css2?family=Amatic+SC&display=swap");
 
-h3 {
-    font-family: 'Amatic SC';
-    color: snow;
-    text-align: center;
+h3:hover {
+    transform: scale(1.15);
 }
 
-.viewBook {
-    margin-left: 10px;
+.form-group {
+    font-family: 'Amatic SC';
+    text-align: center;
+    color: snow;
+}
+
+.submitBtn {
+    font-family: 'Amatic SC';
+    color: snow;
 }
