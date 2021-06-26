@@ -1,14 +1,13 @@
-.jumbotronMain{
-    height: 300px; 
-    width: 100%;
-    padding-top: 10; 
+@import url("https://fonts.googleapis.com/css2?family=Amatic+SC&display=swap");
+
+h1 {
     text-align: center;
+    font-family: 'Amatic SC';
+    /* font-size: 500px;
+    font-weight:bolder; */
+    color: snow;
 }
 
-.header-text {
-    color: black;
-    -webkit-text-fill-color: white;
-    -webkit-text-stroke-width: 4px;
-    -webkit-text-stroke-color: black;
-    font-size: 5rem;
+h1:hover {
+    transform: scale(1.5);
 }

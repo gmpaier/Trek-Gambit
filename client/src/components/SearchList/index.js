@@ -4,18 +4,18 @@ import "./SearchList.css";
 
 const SearchList = props => {
     return (props.books.length === 0) ? (
-        <div className="card">
+        <div className="card-main">
             <div className="card-body player">
                 <div className="article">
-                    <h3>Parks found: </h3>
+                    <h3>Parks Found</h3>
                 </div>
             </div>
         </div>
     ) : (
-            <div className="card">
+            <div className="card-second">
                 <div className="card-body player">
                     <div className="article">
-                        <h3>Parks found: </h3>
+                        <h3>Parks Found</h3>
                         {props.books.map(book => {
                             return (
                                 <section>
