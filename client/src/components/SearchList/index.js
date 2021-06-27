@@ -9,23 +9,23 @@ const SearchList = props => {
         <div className="card-main">
             <div className="card-body player">
                 <div className="article">
-                    <h3>Parks Found</h3>
+                    <h2>Parks Found</h2>
                 </div>
             </div>
         </div>
     ) : (
-            <div className="card-second">
+            <div className="card-main">
                 <div className="card-body player">
                     <div className="article">
+
 
                         <h3>Parks Found</h3>
                         {props.parks.map(park => {
                            return (
                                 <section className = "rounded-3">
-                                    <li className="search-list list-group-item rounded-3">
-                                        <Row className="SearchResult row" id={park.id + "Card"} key={park._id}>
-                                            <Col size = "2"></Col>
-                                            <Col size="8" className="parkImage">
+                                    <li className="search-list list-group-item">
+                                      <Row className="SearchResult row" id={park.id + "Card"} key={park._id}>
+                                            <Col size = "2" className="parkImage">
                                                 <img src={park.image} alt={park.fullName} className = "border border-dark" />
                                             </Col>
                                             <Col size = "2"></Col>

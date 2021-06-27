@@ -6,9 +6,7 @@ function Jumbotron() {
     return (
     <div className="jumbotron">
         <br />
-        {/* <br />
-        <br /> */}
-        <h1>Find Your Next Destination</h1>
+        Find Your Next Destination
     </div>
     );
 }
