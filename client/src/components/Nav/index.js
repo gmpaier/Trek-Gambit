@@ -32,6 +32,12 @@ function Nav() {
               >
                 Park Or Not
               </NavLink>
+              <NavLink 
+              to = "/leaderboard"
+              className = "nav-link"
+              >
+                Leaderboard
+              </NavLink>
             </div>
           </div>
         </div>
