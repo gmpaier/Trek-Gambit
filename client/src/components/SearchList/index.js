@@ -3,7 +3,9 @@ import { Row, Col } from "../Grid";
 import "./SearchList.css";
 
 const SearchList = props => {
-    return (props.books.length === 0) ? (
+
+    console.log(props);
+    return (props.parks.length === 0) ? (
         <div className="card-main">
             <div className="card-body player">
                 <div className="article">
@@ -15,39 +17,44 @@ const SearchList = props => {
             <div className="card-main">
                 <div className="card-body player">
                     <div className="article">
-                        <h2>Parks Found</h2>
-                        {props.books.map(book => {
-                            return (
-                                <section>
+
+
+                        <h3>Parks Found</h3>
+                        {props.parks.map(park => {
+                           return (
+                                <section className = "rounded-3">
                                     <li className="search-list list-group-item">
-                                        <Row className="SearchResult row" id={book.title + "Card"} key={book._id}>
-                                            <Col size="2" className="bookImage">
-                                                <img src={"Image"} alt={"Title"} />
+                                      <Row className="SearchResult row" id={park.id + "Card"} key={park._id}>
+                                            <Col size = "2" className="parkImage">
+                                                <img src={park.image} alt={park.fullName} className = "border border-dark" />
                                             </Col>
-                                            <Col size="1" className="emptyCol" />
-                                            <Col size="9" className="bookInfo">
+                                            <Col size = "2"></Col>
+                                            <Col size="9" className="parkInfo">
                                                 <Row>
-                                                    <h3 className="bookTitle">"Title JSX"</h3>
+                                                    <h3 className="parkFullname text-center">{park.fullName}</h3>
                                                 </Row>
                                                 <Row>
-                                                    <h4 className="bookAuthor">Author JSX</h4>
+                                                    <h4 className="parkStates text-center">{"State(s): "}{park.states.replace(/,/g, ", ")}</h4>
                                                 </Row>
                                                 <Row>
-                                                 Description JSX
+                                                 <p className = "text-center">{park.description}</p>
                                                 </Row>
                                             </Col>
                                         </Row>
                                         <br></br>
-                                        <Row className="buttonDiv">
-                                            <button className="saveBook btn btn-info" id={book.id} onClick={(event) => props.handleSavedButton(event)}>
-                                                Save
-                                        </button>
-                                            <a href={book.link} target="_blank" rel="noopener noreferrer">
-                                                <button className="viewBook btn btn-success">
-                                                    View Online
-                                            </button>
+                                        <Col className="buttonDiv" size = "12">
+                                            <button className="btn btn-secondary btn-lg">
+                                            <a href={park.url} target="_blank" rel="noopener noreferrer">
+                                                View Online
                                             </a>
-                                        </Row>
+                                            </button>
+
+                                            <a href={'/park/?parkCode=' + park.parkCode} >
+                                                <button className = "btn"> 
+                                                    View Park Page
+                                                </button>
+                                            </a>
+                                        </Col>
                                     </li>
                                     <br></br>
                                 </section>

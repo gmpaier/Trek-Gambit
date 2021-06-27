@@ -14,6 +14,10 @@ Activity.init(
     name: {
       type: DataTypes.STRING,
       allowNull: false
+    },
+    nps_id: {
+      type: DataTypes.STRING,
+      allowNull: false
     }
   },
   {

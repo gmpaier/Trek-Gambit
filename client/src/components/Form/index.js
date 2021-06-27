@@ -6,16 +6,21 @@ const Form = props => {
         <form>
             <br />
             <div className="form-group">
-                <label className="BookSearchLabel"><h2>Park Search</h2></label>
+
+
+                <label className="ParkSearchLabel"><h2>Park Search</h2></label>
+
                 <br></br>
                 <input className="col-12 form-control"
                     value={props.search}
                     type="text"
-                    name="searchBook"
-                    placeholder="Search Desired Park"
+
+                    name="searchPark"
+                    placeholder="Search for a park!"
                     onChange={props.handleInputChange}
                 />
             </div>
+            <br />
             <button type="submit" className="submitBtn btn btn-dark" onClick={props.handleFormSubmit}>
                 Enter
             </button>
