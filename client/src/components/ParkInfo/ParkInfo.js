@@ -23,19 +23,20 @@ const ParkInfo = props => {
 
   
 
-        API.getIndividualPark(props.parkCode)
-        .then(res => {
-            if (res.data.data === "error") {
-                throw new Error(res.data.data);
-            }
-            else {
-                let results = res.data.data[0]
-                console.log(results)
+        // API.getIndividualPark(props.parkCode)
+        // .then(res => {
+        //     if (res.data.data === "error") {
+        //         throw new Error(res.data.data);
+        //     }
+        //     else {
+        //         let results = res.data.data[0]
+        //         console.log(results)
                 
                 // setDesignation({designation: "test"});
 
-            }
-        })
+            // }
+        // }
+        // )
 
 
     return (
