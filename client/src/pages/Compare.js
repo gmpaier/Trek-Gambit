@@ -1,6 +1,6 @@
-import { compare } from "bcrypt";
-import React, { Component } from "react";
+// import { compare } from "bcrypt";
+// import React, { Component } from "react";
 
-class Compare extends Component {}
+// class Compare extends Component {}
 
-export default compare
+// export default compare
