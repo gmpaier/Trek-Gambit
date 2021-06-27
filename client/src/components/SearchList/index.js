@@ -7,15 +7,15 @@ const SearchList = props => {
         <div className="card-main">
             <div className="card-body player">
                 <div className="article">
-                    <h3>Parks Found</h3>
+                    <h2>Parks Found</h2>
                 </div>
             </div>
         </div>
     ) : (
-            <div className="card-second">
+            <div className="card-main">
                 <div className="card-body player">
                     <div className="article">
-                        <h3>Parks Found</h3>
+                        <h2>Parks Found</h2>
                         {props.books.map(book => {
                             return (
                                 <section>

@@ -6,7 +6,7 @@ const Form = props => {
         <form>
             <br />
             <div className="form-group">
-                <label className="BookSearchLabel"><h3>Park Search</h3></label>
+                <label className="BookSearchLabel"><h2>Park Search</h2></label>
                 <br></br>
                 <input className="col-12 form-control"
                     value={props.search}

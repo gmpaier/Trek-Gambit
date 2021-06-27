@@ -1,10 +1,12 @@
 import React from "react";
+// import { Container } from "../Grid";
 import "./Banner.css"
 
 function Banner() {
     return (
-        <div id = "banner">
-            <h1>National Parks</h1>
+        <div className="jumbotron">
+            <br />
+            National Parks
         </div>
     )
 }
