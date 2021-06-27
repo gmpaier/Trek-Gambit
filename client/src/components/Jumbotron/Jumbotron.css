@@ -1,13 +1,9 @@
 @import url("https://fonts.googleapis.com/css2?family=Amatic+SC&display=swap");
 
-h1 {
+div.jumbotron {
     text-align: center;
     font-family: 'Amatic SC';
-    /* font-size: 500px;
-    font-weight:bolder; */
+    font-size: 90px;
+    font-weight:bolder;
     color: snow;
-}
-
-h1:hover {
-    transform: scale(1.5);
 }

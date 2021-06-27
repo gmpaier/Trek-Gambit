@@ -8,7 +8,7 @@ import Home from "./pages/Home";
 import Search from "./pages/Search";
 import Park from "./pages/Park";
 // import Compare from "./components/Compare";
-// import Leaderboard from "./components/Leaderboard";
+import Leaderboard from "./pages/Leaderboard/Leaderboard";
 import Development from "./pages/Development/Development";
 
 function App() {
@@ -25,7 +25,7 @@ function App() {
         {/* <Route path = "/random" component = {Random} /> */}
         <Route path = "/park" component = {Park} />
         {/* <Route path = "/compare" component = {ParkOrNot} />  */}
-        {/* <Route path = "/leaderboard" component = {Leaderboard} */}
+        <Route path = "/leaderboard" component = {Leaderboard} />
       </Switch>
     </Router>
 
