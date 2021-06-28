@@ -41,10 +41,10 @@ const ParkInfo = props => {
 
 
     return (
-        <div className = "bg-white m-2 p-2 rounded-3">
+        <div className = "m-2 p-2 rounded-3 half">
             <br></br>
             <Row className = "row" id = "parkName">
-                <h1 className = "text-center">{data.fullName}</h1>
+                <h1 className = "text-center">{data.name}</h1>
             </Row>
             <div className = "row">
             {data.images && data.images.splice(0,2).map((image) => {
@@ -53,38 +53,52 @@ const ParkInfo = props => {
                 </div>
             })}
             </div>
+
+            <Row >
+                <h3>Description: </h3>
+                <p>{data.description && data.description}</p>
+            </Row>
+
+            <Row >
+                <h3>Designation: </h3>
+                <p>{data.designation}</p>
+            </Row>
+
+            <Row >
+                <h3>Fees: </h3>
+                {data.entranceFees && <p>${data.entranceFees[0].cost} - {data.entranceFees[0].description}</p>}
+            </Row>
+
+            <Row >
+                <h3>Address: </h3>
+                {data.addresses && <p>{data.addresses[0].line1}</p>}
+                {data.addresses && <p>{data.addresses[0].city}, {data.addresses[0].stateCode} {data.addresses[0].postalCode}</p>}
+            </Row>
             
             <Row >
                 <h3>Weather Info: </h3>
-                <br />
-                <p>{data.weatherInfo}</p>
-            </Row>
-            <Row >
-                <h3>Designation: </h3>
-                <br />
-                <p>{data.designation}</p>
-            </Row>
-            <Row >
-                <h3>Contact: </h3>
-                <br />
-                <p>{data.contacts && <p>Phone Number: {data.contacts.phoneNumbers[0].phoneNumber} <br /> Email: {data.contacts.emailAddresses[0].emailAddress}  </p>}</p>
-            </Row>
-            <Row >
-                <h3>Weather Info: </h3>
-                <br />
-                <p>{data.weatherInfo}</p>
-            </Row>
-            <Row >
-                <h3>Weather Info: </h3>
-                <br />
-                <p>{data.weatherInfo}</p>
-            </Row>
-            <Row >
-                <h3>Weather Info: </h3>
-                <br />
                 <p>{data.weatherInfo}</p>
             </Row>
 
+
+
+            <Row >
+                <h3>Operating Hours: </h3>
+                {data.operatingHours && <p>Sunday: {data.operatingHours[0].standardHours.sunday}</p>}
+                {data.operatingHours && <p>Monday: {data.operatingHours[0].standardHours.monday}</p>}
+                {data.operatingHours && <p>Tuesday: {data.operatingHours[0].standardHours.tuesday}</p>}
+                {data.operatingHours && <p>Wednesday: {data.operatingHours[0].standardHours.wednesday}</p>}
+                {data.operatingHours && <p>Thursday: {data.operatingHours[0].standardHours.thursday}</p>}
+                {data.operatingHours && <p>Friday: {data.operatingHours[0].standardHours.friday}</p>}
+                {data.operatingHours && <p>Saturday: {data.operatingHours[0].standardHours.saturday}</p>}
+                {data.operatingHours && <p>{data.operatingHours[0].description}</p>}
+            </Row>
+
+
+            <Row >
+                <h3>Contact: </h3>
+                <p>{data.contacts && <p>Phone Number: {data.contacts.phoneNumbers[0].phoneNumber} <br /> Email: <a href={`mailto:${data.contacts.emailAddresses[0].emailAddress}`}>{data.contacts.emailAddresses[0].emailAddress}</a></p>}</p>
+            </Row>
         </div>
     )
 

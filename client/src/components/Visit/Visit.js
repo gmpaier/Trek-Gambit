@@ -24,10 +24,10 @@ const Visit = props => {
 
 
     return (
-        <div id = "">
+        <div id = "half">
         <form>
             <br />
-            <div className="form-group">
+            <div className="form-group halfvisit rounded-3 p-1">
 
                 <label className="visit-status"><h3>Visit Status</h3></label>
                 <br></br>
