@@ -1,12 +1,13 @@
+require('dotenv').config();
 async function getActivities() {
   try {
-    const responseData = await fetch('https://developer.nps.gov/api/v1/activities?api_key=1y0zIuzR0jebuL5GGN8LUNA07CshBja9C5SBzN3F', {
+    const responseData = await fetch('https://developer.nps.gov/api/v1/activities?api_key=' + process.env.API_KEY, {
       method: 'GET',
       headers: { 'Content-Type': 'application/json'  },
     });
     if (responseData.ok){
       const response = await responseData.json();
-      return response;
+      return response.data;
     }
   }
   catch (err){
@@ -16,13 +17,13 @@ async function getActivities() {
 
 async function getParks() {
   try {
-    const responseData = await fetch('https://developer.nps.gov/api/v1/parks?limit=467&api_key=1y0zIuzR0jebuL5GGN8LUNA07CshBja9C5SBzN3F', {
+    const responseData = await fetch('https://developer.nps.gov/api/v1/parks?limit=467&api_key=' + process.env.API_KEY, {
       method: 'GET',
       headers: { 'Content-Type': 'application/json'  },
     });
     if (responseData.ok){
       const response = await responseData.json();
-      return response;
+      return response.data;
     }
   }
   catch (err){
@@ -33,7 +34,7 @@ async function getParks() {
 async function seedActivities() {
   try {
     const activities = await getActivities();
-    const response = await fetch('/api/parks/bulk', {
+    const response = await fetch('/api/activities/bulk', {
       method: 'POST',
       body: JSON.stringify(activities),
       headers: { 'Content-Type': 'application/json' },
@@ -50,7 +51,7 @@ async function seedActivities() {
 async function seedParks() {
   try {
     const parks = await getParks();
-    const response = await fetch('/api/activites/bulk', {
+    const response = await fetch('/api/parks/bulk', {
       method: 'POST',
       body: JSON.stringify(parks),
       headers: { 'Content-Type': 'application/json' },
@@ -64,11 +65,11 @@ async function seedParks() {
   }
 }
 
-async function seedParkActivity(parks, activities){
+async function seedParkActivity(parks){
   try {
     const response = await fetch('/api/park-activites/bulk', {
       method: 'POST',
-      body: JSON.stringify({parks: parks, activities: activities}),
+      body: JSON.stringify(parks),
       headers: { 'Content-Type': 'application/json' },
     });
     if (response.ok){
@@ -84,7 +85,7 @@ async function seedAll(){
   try {
     const parks = await seedParks();
     const activites = await seedActivities();
-    const response = await seedParkActivity(parks, activites);
+    const response = await seedParkActivity(parks);
   }
   catch (err){
     if (err) throw err;
