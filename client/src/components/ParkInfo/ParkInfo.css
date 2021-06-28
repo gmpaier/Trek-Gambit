@@ -1,0 +1,9 @@
+@import url("https://fonts.googleapis.com/css2?family=Alfa+Slab+One&display=swap");
+
+#parkName {
+    text-align: center;
+    font-family: 'Amatic SC';
+    font-size: 90px;
+    font-weight:bolder;
+    color: snow;
+}

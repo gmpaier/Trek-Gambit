@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from "react";
 import API from "../../utils/API";
 import { Row, Col } from "../Grid";
+import "./ParkInfo.css";
 
 
 const ParkInfo = props => {
@@ -19,7 +20,7 @@ const ParkInfo = props => {
         // weather: weatherInfo
     
 
-    const [data, setData] = useState({})
+    const [data, setData] = useState([])
 
     useEffect( () => {
 
@@ -29,10 +30,9 @@ const ParkInfo = props => {
                 throw new Error(res.data.data);
             }
             else {
-                let results = res.data.data[0]
-                // console.log(results);
+                let results = res.data.data[0];
                 setData(results);
-                console.log(results)
+                console.log(results);
                 }
             }
         )
@@ -41,13 +41,51 @@ const ParkInfo = props => {
 
 
     return (
-        <Row className = "row">
-            <h1 className = "text-center">{data.fullName}</h1>
+        <div className = "bg-white m-2 p-2 rounded-3">
+            <br></br>
+            <Row className = "row" id = "parkName">
+                <h1 className = "text-center">{data.fullName}</h1>
+            </Row>
+            <div className = "row">
+            {data.images && data.images.splice(0,2).map((image) => {
+                return <div className = "col-sm-6 col-md-6 col-lg-4 col-xl-5 p-1">
+                    <img src = {image.url} alt = "mapped park" />
+                </div>
+            })}
+            </div>
             
-        </Row>
-            
+            <Row >
+                <h3>Weather Info: </h3>
+                <br />
+                <p>{data.weatherInfo}</p>
+            </Row>
+            <Row >
+                <h3>Designation: </h3>
+                <br />
+                <p>{data.designation}</p>
+            </Row>
+            <Row >
+                <h3>Contact: </h3>
+                <br />
+                <p>{data.contacts && <p>Phone Number: {data.contacts.phoneNumbers[0].phoneNumber} <br /> Email: {data.contacts.emailAddresses[0].emailAddress}  </p>}</p>
+            </Row>
+            <Row >
+                <h3>Weather Info: </h3>
+                <br />
+                <p>{data.weatherInfo}</p>
+            </Row>
+            <Row >
+                <h3>Weather Info: </h3>
+                <br />
+                <p>{data.weatherInfo}</p>
+            </Row>
+            <Row >
+                <h3>Weather Info: </h3>
+                <br />
+                <p>{data.weatherInfo}</p>
+            </Row>
 
-
+        </div>
     )
 
 }
