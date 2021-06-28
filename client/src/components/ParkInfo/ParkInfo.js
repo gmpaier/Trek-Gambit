@@ -1,10 +1,10 @@
 import React, { useEffect, useState } from "react";
-import { Row, Col } from "../Grid";
 import API from "../../utils/API";
+import { Row, Col } from "../Grid";
+
 
 const ParkInfo = props => {
 
-    
         // activities: activities
         // description: description
         // designation: designation
@@ -19,30 +19,35 @@ const ParkInfo = props => {
         // weather: weatherInfo
     
 
-    // const [designation, setDesignation] = useState();
+    const [data, setData] = useState({})
 
-  
+    useEffect( () => {
 
-        // API.getIndividualPark(props.parkCode)
-        // .then(res => {
-        //     if (res.data.data === "error") {
-        //         throw new Error(res.data.data);
-        //     }
-        //     else {
-        //         let results = res.data.data[0]
-        //         console.log(results)
-                
-                // setDesignation({designation: "test"});
+        API.getIndividualPark(props.parkCode)
+        .then(res => {
+            if (res.data.data === "error") {
+                throw new Error(res.data.data);
+            }
+            else {
+                let results = res.data.data[0]
+                // console.log(results);
+                setData(results);
+                console.log(results)
+                }
+            }
+        )
+    }, [])
 
-            // }
-        // }
-        // )
 
 
     return (
-        <div>
-            <h1>test</h1>
-        </div>
+        <Row className = "row">
+            <h1 className = "text-center">{data.fullName}</h1>
+            
+        </Row>
+            
+
+
     )
 
 }

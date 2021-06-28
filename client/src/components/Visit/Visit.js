@@ -8,7 +8,7 @@ function Visit() {
             <br />
             <div className="form-group">
 
-                <label className="ParkSearchLabel"><h3>Visit Status</h3></label>
+                <label className="visit-status"><h3>Visit Status</h3></label>
                 <br></br>
                 <select name="status-select" id="status-select">
                     <option value="">--Please choose an option--</option>
@@ -29,6 +29,15 @@ function Visit() {
                 </select>
                 <br></br>
 
+                <label className = "duration"><h3>What is the Duration?</h3></label>
+                <br />
+                <input type="number" name="duration" />
+                <select>
+                    <option value = "miles">Miles</option>
+                    <option value = "min">Minutes</option>
+                    <option value = "hrs">Hours</option>
+                </select>
+                <br />
                 <label className="rating"><h3>What would you rate this park?</h3></label>
                 <br></br>
                 <select name="rating-list" id="rating-list">
@@ -47,7 +56,7 @@ function Visit() {
 
             </div>
             <br />
-            <button type="submit" className="submitBtn btn btn-dark btn-block" onClick={(event) => event.preventDefault(), console.log("Hello")}>
+            <button type="submit" className="submitBtn btn btn-dark btn-block" onClick={(event) => event.preventDefault()}>
                 Enter
             </button>
         </form>
