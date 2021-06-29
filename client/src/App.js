@@ -22,7 +22,7 @@ function App() {
         {/* <Route path = "/login" component = {Login} /> */}
         <Route path = "/search" component = {Search} />
         <Route path = "/development" component = {Development} />
-        {/* <Route path = "/random" component = {Random} /> */}
+        <Route path = "/random" component = {Park} />
         <Route path = "/park" component = {Park} />
         {/* <Route path = "/compare" component = {ParkOrNot} />  */}
         <Route path = "/leaderboard" component = {Leaderboard} />
