@@ -4,53 +4,25 @@ const path = require('path')
 require('dotenv').config({ path: path.resolve(__dirname, '../.env') })
 
 async function getActivities() {
-  // try {
-    // const responseData = await fetch('https://developer.nps.gov/api/v1/activities?api_key=' + process.env.API_KEY, {
-    //   method: 'GET',
-    //   headers: { 'Content-Type': 'application/json'  },
-    // });
+  try {
     const responseData = await axios.get('https://developer.nps.gov/api/v1/activities?api_key=' + process.env.API_KEY);
-    // console.log(responseData);
-    // if (responseData.ok){
-    //   console.log("get activities good");
-    //   const response = await responseData.json();
-    //   return response.data;
-    // }
-    // else {
-    //   console.log("bad response in get activities");
-    // }
-      // const response = await responseData.json();
       return responseData.data.data;
-  // }
-  // catch (err){
-  //   console.log("error in get activities");
-  //   if (err) throw err;
-  // }
+  }
+  catch (err){
+    console.log("error in get activities");
+    if (err) throw err;
+  }
 }
 
 async function getParks() {
-  // try {
-    // const responseData = await fetch('https://developer.nps.gov/api/v1/parks?limit=467&api_key=' + process.env.API_KEY, {
-    //   method: 'GET',
-    //   headers: { 'Content-Type': 'application/json'  },
-    // });
+  try {
     const responseData = await axios.get('https://developer.nps.gov/api/v1/parks?limit=467&api_key=' + process.env.API_KEY);
-    // console.log(responseData);
-    // if (responseData.ok){
-    //   console.log("get parks good");
-    //   const response = await responseData.json();
-    //   return response.data;
-    // }
-    // else {
-    //   console.log("bad response in get parks");
-    // }
-    // console.log(responseData.data.data[0]);
     return responseData.data.data;
-  // }
-  // catch (err){
-  //   console.log("error in get parks");
-  //   if (err) throw err;
-  // }
+  }
+  catch (err){
+    console.log("error in get parks");
+    if (err) throw err;
+  }
 }
 
 async function seedActivities() {
@@ -114,7 +86,8 @@ async function seedParkActivity(parks){
     });
     for (let i = 0; i < parksMap.length; i++){
       for (let j = 0; j < parks[i].activities.length; j++) {
-        parksMap[i].activities.push(parks[i].activities[j].id);
+        parksMap[i].activities.push(parks[i].activities[j]);
+        // parksMap[i].activities.push({id: parks[i].activities[j].id, name: parks[i].activities[j].name });
       }
     }
     console.log(parksMap);
@@ -124,12 +97,6 @@ async function seedParkActivity(parks){
       body: JSON.stringify(parksMap),
       headers: { 'Content-Type': 'application/json' },
     });
-    // if (response.ok){
-    //   return true;
-    // }
-    // else {
-    //   console.log("bad response in get activities");
-    // }
   }
   catch (err){
     if (err) throw err;
