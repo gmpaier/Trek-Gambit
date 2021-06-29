@@ -28,8 +28,10 @@
     "express-session": "^1.17.1",
     "if-env": "^1.0.4",
     "mysql2": "^2.2.5",
+    "react-bootstrap": "^1.6.1",
     "react-router-dom": "^5.2.0",
     "sequelize": "^6.3.5",
-    "node-fetch": "2.6.1"
+    "node-fetch": "2.6.1",
+    "react-table": "^7.7.0"
   }
 }

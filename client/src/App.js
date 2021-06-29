@@ -3,7 +3,8 @@ import Nav from "./components/Nav";
 import Splash from "./pages/Splash";
 import './App.css';
 import Home from "./pages/Home";
-// import login from "./components/Login.js"
+import Register from "./pages/Register/Register"
+
 // import Random from "./components/Random";
 import Search from "./pages/Search";
 import Park from "./pages/Park";
@@ -19,10 +20,10 @@ function App() {
       <Switch >
         <Route path = "/" component = {Splash} exact />
         <Route path = "/home" component = {Home}/>
-        {/* <Route path = "/login" component = {Login} /> */}
+        <Route path = "/Login" component = {Register} /> 
         <Route path = "/search" component = {Search} />
         <Route path = "/development" component = {Development} />
-        {/* <Route path = "/random" component = {Random} /> */}
+        <Route path = "/random" component = {Park} />
         <Route path = "/park" component = {Park} />
         {/* <Route path = "/compare" component = {ParkOrNot} />  */}
         <Route path = "/leaderboard" component = {Leaderboard} />
@@ -33,3 +34,5 @@ function App() {
 }
 
 export default App;
+
+

@@ -9,7 +9,7 @@ const SearchList = props => {
         <div className="card-main">
             <div className="card-body player">
                 <div className="article">
-                    <h2>Parks Found</h2>
+                    <h2 className = "text-white text-center">Parks Found</h2>
                 </div>
             </div>
         </div>
@@ -19,42 +19,51 @@ const SearchList = props => {
                     <div className="article">
 
 
-                        <h3>Parks Found</h3>
+                        <h3 className = "text-white text-center">Parks Found</h3>
                         {props.parks.map(park => {
                            return (
                                 <section className = "rounded-3">
-                                    <li className="search-list list-group-item">
+                                    <li className="search-list list-group-item rounded-3">
                                       <Row className="SearchResult row" id={park.id + "Card"} key={park._id}>
-                                            <Col size = "2" className="parkImage">
-                                                <img src={park.image} alt={park.fullName} className = "border border-dark" />
+                                            <Row>
+                                                <h3 className="parkFullname text-center">{park.fullName}</h3>
+                                            </Row>
+
+                                            <Row>
+                                                <h4 className="parkStates text-center">{"State(s): "}{park.states.replace(/,/g, ", ")}</h4>
+                                            </Row>
+                                            
+                                            <Col size = "2"></Col>
+                                            <Col size = "8" className="parkImage">
+                                                <img src={park.image} alt={park.fullName} className = "border border-dark w-100 h-100" />
                                             </Col>
                                             <Col size = "2"></Col>
-                                            <Col size="9" className="parkInfo">
-                                                <Row>
-                                                    <h3 className="parkFullname text-center">{park.fullName}</h3>
-                                                </Row>
-                                                <Row>
-                                                    <h4 className="parkStates text-center">{"State(s): "}{park.states.replace(/,/g, ", ")}</h4>
-                                                </Row>
-                                                <Row>
-                                                 <p className = "text-center">{park.description}</p>
-                                                </Row>
-                                            </Col>
+                                            <Col size = "2"></Col>
+                                            <Col size="8" className="parkInfo"></Col>
+                                            <Row>
+                                                <p className = "text-center">{park.description}</p>
+                                            </Row>
+                                            
+                                            <Col size = "2"></Col>
                                         </Row>
                                         <br></br>
-                                        <Col className="buttonDiv" size = "12">
-                                            <button className="btn btn-secondary btn-lg">
-                                            <a href={park.url} target="_blank" rel="noopener noreferrer">
-                                                View Online
-                                            </a>
-                                            </button>
-
-                                            <a href={'/park/?parkCode=' + park.parkCode} >
-                                                <button className = "btn"> 
-                                                    View Park Page
+                                        <Row className = "text-center">
+                                            <Col size = "6" className =  "text-center">
+                                                <button className="btn btn-default btn-block btn-primary btn-lg text-decoration-none text-center">
+                                                <a href={park.url} target="_blank" rel="noopener noreferrer" className = "text-reset text-decoration-none">
+                                                    View Online
+                                                </a>
                                                 </button>
-                                            </a>
-                                        </Col>
+                                            </Col>
+                                            <Col size = "6" className = "text-center">
+                                                <a href={'/park/?parkCode=' + park.parkCode} >
+                                                    <button className = "btn btn-primary btn-lg text-center"> 
+                                                        View Park Page
+                                                    </button>
+                                                </a>
+                                            </Col>
+                                        </Row>
+                                        
                                     </li>
                                     <br></br>
                                 </section>

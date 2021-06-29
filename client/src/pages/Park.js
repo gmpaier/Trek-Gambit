@@ -17,7 +17,7 @@ render() {
                         <ParkInfo parkCode = {parkCode}/>
                     </Col>
                     <Col size = "4">
-                        <Visit />
+                        <Visit parkCode = {parkCode} />
                     </Col>
                 </Row>
             </Container>

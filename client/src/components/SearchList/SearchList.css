@@ -8,6 +8,6 @@ h2 {
     color: snow;
 }
 
-.viewBook {
-    margin-left: 10px;
-}
+.btn {
+    width: 100%;   
+};
