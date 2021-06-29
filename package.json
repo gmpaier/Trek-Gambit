@@ -26,7 +26,9 @@
     "express": "^4.16.3",
     "if-env": "^1.0.4",
     "mysql2": "^2.2.5",
+    "react-bootstrap": "^1.6.1",
     "react-router-dom": "^5.2.0",
+    "react-table": "^7.7.0",
     "sequelize": "^6.3.5"
   }
 }
