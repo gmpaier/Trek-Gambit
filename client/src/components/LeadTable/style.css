@@ -14,8 +14,8 @@ h2 {
     font-size:xx-large;
     font-weight:bolder;
     color: snow;
-    /* opacity: 89%; */
-    /* padding-left: 30px;
-    padding-right: 30px;
-    margin: 10px; tb */
+}
+
+div.card {
+    background-color: #212925;
 }
