@@ -4,7 +4,6 @@ const { Activity } = require('../../models');
 router.post("/bulk", async (req, res) => {
   try {
     const activitiesIn = req.body;
-    console.log(activitiesIn);
     const activitiesMap = activitiesIn.map((activity) => {
       const actOut = {
         name: activity.name,

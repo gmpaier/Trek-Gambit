@@ -136,7 +136,7 @@ UserPark.belongsTo(User, {
 
 Park.hasMany(UserPark, {
   foreignKey: 'park_id',
-  onDelete: 'SET NULL'
+  onDelete: 'CASCADE'
 });
 
 UserPark.belongsTo(Park, {

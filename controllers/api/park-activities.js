@@ -3,19 +3,24 @@ const { ParkActivity, Park, Activity } = require('../../models');
 
 router.post("/bulk", async (req, res) => {
   try {
+    console.log("in park activities");
     const parks = req.body;
-    const parkActivities = [];
     for (let i = 0; i < parks.length; i++){
-      const park = await Park.findOne({ where: { code: parks[i].parkCode }});
-      for (let j = 0; j < parks[i].activities.length; j++){
-        const activity = await Activity.findOne({ where: { nps_id: parks[i].activities[j].id }});
-        if (park && activity){
-          const newPair = await park.addActivity(activity);
-          parkActivities.push(newPair);
+      const parkData = await Park.findOne({ where: { code: parks[i].parkCode }});
+      const park = await parkData.get({ plain: true })
+      console.log(park);
+      if (parks[i].activities){
+        for (let j = 0; j < parks[i].activities.length; j++){
+          const activityData = await Activity.findOne({ where: { nps_id: parks[i].activities[j] }});
+          if (activityData){
+            const activity = await activityData.get({ plain: true });
+            console.log(activity);
+            await ParkActivity.create({ park_id: park.id, activity_id: activity.id});
+          }
         }
       }
     }
-    res.status(200).json(parkActivities);
+    res.status(200);
   }
   catch (err) {
     res.status(400).json(err);
