@@ -7,7 +7,6 @@ const ParkActivity = require("./ParkActivity");
 const User = require("./User");
 const UserPark = require("./UserPark");
 const Visit = require("./Visit");
-const VisitActivity = require("./VisitActivity");
 const VisitMedia = require("./VisitMedia");
 
 Visit.hasMany(Comment, {
@@ -107,23 +106,14 @@ VisitMedia.belongsTo(Visit, {
   foreignKey: 'visit_id'
 });
 
-Visit.hasMany(VisitActivity, {
-  foreignKey: 'visit_id',
-  onDelete: 'CASCADE'
-});
-
-VisitActivity.belongsTo(Visit, {
-  foreignKey: 'visit_id'
-});
-
-Activity.hasMany(VisitActivity, {
+Activity.hasMany(Visit, {
   foreignKey: 'activity_id',
   onDelete: 'CASCADE'
 });
 
-VisitActivity.belongsTo(Activity, {
+Visit.belongsTo(Activity, {
   foreignKey: 'activity_id'
-});
+})
 
 User.hasMany(UserPark, {
   foreignKey: 'user_id',
@@ -157,6 +147,5 @@ module.exports = {
   User,
   UserPark,
   Visit,
-  VisitActivity,
   VisitMedia
 }

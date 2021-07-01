@@ -25,6 +25,22 @@ Visit.init(
         key: 'id',
       },
     },
+    activity_id: {
+      type: DataTypes.INTEGER,
+      allowNull: false,
+      references: {
+        model: 'activity',
+        key: 'id',
+      },
+    },
+    length: {
+      type: DataTypes.DECIMAL(4,1),
+      allowNull: false,
+    },
+    unit: {
+      type: DataTypes.STRING,
+      allowNull: false
+    },
     body: {
       type: DataTypes.TEXT,
       allowNull: false
