@@ -1,4 +1,5 @@
 import axios from "axios";
+// import dotenv from "dotenv";
 
 export default {
 
@@ -26,5 +27,8 @@ export default {
   // Saves a park to the database
   savePark: function(parkData) {
     return axios.post("/api/parks", parkData);
-  }
+  },
+  // getLeadBoard: function() {
+  //   return axios.get("/api/leaderboard");
+  // }
 };
