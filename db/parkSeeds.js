@@ -86,7 +86,7 @@ async function seedParkActivity(parks){
     });
     for (let i = 0; i < parksMap.length; i++){
       for (let j = 0; j < parks[i].activities.length; j++) {
-        parksMap[i].activities.push(parks[i].activities[j]);
+        parksMap[i].activities.push(parks[i].activities[j].id);
         // parksMap[i].activities.push({id: parks[i].activities[j].id, name: parks[i].activities[j].name });
       }
     }
