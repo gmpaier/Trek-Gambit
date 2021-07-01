@@ -49,7 +49,7 @@ class Parksearch extends Component {
             .catch(err => this.setState({ error: err.items } ));
     }
 
-    handleParkButton = event => {
+    handlePostButton = event => {
         event.preventDefault();
         console.log(this.state.parks)
         let savedParks = this.state.filter(park => park.id === event.target.id)
@@ -76,7 +76,7 @@ class Parksearch extends Component {
                 </Container>
                 <br></br>
                 <Container>
-                    <SearchList parks = {this.state.parks} handleSavedButton={this.handleSavedButton} />
+                    <SearchList parks = {this.state.parks} handleSavedButton={this.handlePostButton} />
                 </Container>
             </Container>
         )

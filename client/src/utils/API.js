@@ -1,14 +1,17 @@
 import axios from "axios";
+import dotenv from "dotenv";
 
 export default {
 
   // Get park from nps search 
   getNationalPark: function(query) {
-    return axios.get("https://developer.nps.gov/api/v1/parks?q=" + query +  "&api_key=1y0zIuzR0jebuL5GGN8LUNA07CshBja9C5SBzN3F")
+  console.log(process.env.API_KEY);  
+  return axios.get("https://developer.nps.gov/api/v1/parks?q=" + query +  "&api_key=" + process.env.REACT_APP_API_KEY);
+  
   },
 
   getIndividualPark: function(parkCode) {
-    return axios.get("https://developer.nps.gov/api/v1/parks?parkCode=" + parkCode + "&api_key=1y0zIuzR0jebuL5GGN8LUNA07CshBja9C5SBzN3F")
+    return axios.get("https://developer.nps.gov/api/v1/parks?parkCode=" + parkCode + "&api_key=" + process.env.REACT_APP_API_KEY);
   },
 
   // Gets all parks
