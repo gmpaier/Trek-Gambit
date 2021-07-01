@@ -1,8 +1,15 @@
 import React, { Component } from "react";
+// import { useTable, useSortBy } from "react-table";
 import { Container, Row, Col } from "../../components/Grid";
+// import API from "../../utils/API";
 import "./style.css";
 
 class LeadTable extends Component {
+    // componentDidMount() {
+    //     API.getLeadBoard().then((data) => {
+    //         
+    //     })
+    // }
     render() {
         return (
             <Container fluid>
@@ -79,6 +86,8 @@ class LeadTable extends Component {
             </Container>
         )
     }
+    
+    
 }
 
 export default LeadTable;
