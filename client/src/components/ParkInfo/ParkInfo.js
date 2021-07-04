@@ -6,20 +6,6 @@ import "./ParkInfo.css";
 
 const ParkInfo = props => {
 
-        // activities: activities
-        // description: description
-        // designation: designation
-        // directions: directionsUrl
-        // feeCost: entranceFees[0].cost
-        // feeTitle: entranceFees[0].title
-        // feeDescription: entranceFees[0].description
-        // fullName: fullName
-        // images: []images Array
-        // name: name
-        // states: states Array
-        // weather: weatherInfo
-    
-
     const [data, setData] = useState([])
 
     useEffect( () => {
@@ -32,7 +18,6 @@ const ParkInfo = props => {
             else {
                 let results = res.data.data[0];
                 setData(results);
-                console.log(results);
                 }
             }
         )
