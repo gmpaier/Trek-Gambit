@@ -15,7 +15,7 @@ import Development from "./pages/Development/Development";
 function App() {
   return (
 
-    <Router>
+    <Router forceRefresh={true}>
     <Nav />
       <Switch >
         <Route path = "/" component = {Splash} exact />

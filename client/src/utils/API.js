@@ -14,10 +14,15 @@ export default {
     return axios.get("https://developer.nps.gov/api/v1/parks?parkCode=" + parkCode + "&api_key=" + process.env.REACT_APP_API_KEY);
   },
 
+  getParkCodes: function() {
+    return axios.get("https://developer.nps.gov/api/v1/parks?&limit=467&api_key=1y0zIuzR0jebuL5GGN8LUNA07CshBja9C5SBzN3F")
+  },
+
   // Gets all parks
   getParks: function() {
     return axios.get("/api/parks");
   },
+
   // Gets the park with the given id
   getPark: function(id) {
     return axios.get("/api/parks/" + id);
