@@ -1,26 +1,26 @@
 import React, {useState, useEffect} from "react";
-import API from "../../utils/API";
+// import API from "../../utils/API";
 import "./visit.css";
 
 const Visit = props => {
 
-    const [data, setData] = useState([])
+    // const [data, setData] = useState([])
 
-    useEffect( () => {
+    // useEffect( () => {
 
-        API.getIndividualPark(props.parkCode)
-        .then(res => {
-            if (res.data.data === "error") {
-                throw new Error(res.data.data);
-            }
-            else {
-                let results = res.data.data[0];
-                setData(results);
-                console.log(results);
-                }
-            }
-        )
-    }, [])
+    //     API.getIndividualPark(props.parkCode)
+    //     .then(res => {
+    //         if (res.data.data === "error") {
+    //             throw new Error(res.data.data);
+    //         }
+    //         else {
+    //             let results = res.data.data[0];
+    //             setData(results);
+    //             console.log(results);
+    //             }
+    //         }
+    //     )
+    // }, [])
 
 
     return (
@@ -41,7 +41,7 @@ const Visit = props => {
                 <label className="activity"><h3>What did you do there?</h3></label>
                 <br></br>
                 <select name="activity-list" id="activity-list">
-                {data.activities && data.activities.map((activity) => {
+                {props.activities && props.activities.map((activity) => {
                     return <option value = {activity.name}>{activity.name}</option>
                 })}
                 </select>
