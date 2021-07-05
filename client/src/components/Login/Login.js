@@ -1,11 +1,16 @@
 import React, { Component } from "react";
+import "./style.css";
 
 class Login extends Component {
     render() {
         return (
             <form>
-
-                <h3>Log in</h3>
+                <br />
+                <br />
+                <br />
+                <br />
+                <br />
+                <div className="jumbotron">Login</div>
 
                 <div className="form-group">
                     <label>Email</label>

@@ -1,15 +1,24 @@
-.feedBg {
+@import url("https://fonts.googleapis.com/css2?family=Amatic+SC&display=swap");
+
+/* .feedBg {
     background-color: rgba(255, 255, 255, 0.6);
-}
+} */
 
 .postTitle {
+    font-family: 'Amatic SC';
     font-size: 1.5rem;
 }
 
 .postTime {
+    font-family: 'Amatic SC';
     font-size: 1.5rem;
 }
 
-.post-bg {
+/* .post-bg {
     background-color:rgba(0,0,0,0.8);
+} */
+
+div.card {
+    background-color: #212925;
+    opacity: 78%;
 }

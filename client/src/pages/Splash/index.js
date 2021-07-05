@@ -18,7 +18,7 @@ function Splash() {
             </h2>
             <br />
             <div className="row-col-auto">
-                <a href="Login" className="signup" type="button">Login/Sign-Up</a>
+                <a href="Login" className="signup" type="button">Login | Sign-Up</a>
             </div>
         </div>
     )

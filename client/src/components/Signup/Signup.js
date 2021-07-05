@@ -4,7 +4,12 @@ class SignUp extends Component {
     render() {
         return (
             <form>
-                <h3>Signup</h3>
+                <br />
+                <br />
+                <br />
+                <br />
+                <br />
+                <div className="jumbotron">Signup</div>
 
                 <div className="form-group">
                     <label>First name</label>
@@ -28,7 +33,7 @@ class SignUp extends Component {
 
                 <button type="submit" className="btn btn-dark btn-lg btn-block">Register</button>
                 <p className="forgot-password text-right">
-                    Already signed up? <a href="#">log in?</a>
+                    Already signed up? <a href="#">login?</a>
                 </p>
             </form>
         );
