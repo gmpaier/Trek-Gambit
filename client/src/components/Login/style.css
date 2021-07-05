@@ -1,0 +1,18 @@
+@import url("https://fonts.googleapis.com/css2?family=Amatic+SC&display=swap");
+
+div.jumbotron {
+    font-family: 'Amatic SC';
+    font-size: 90px;
+    font-weight: bolder;
+    color: snow;
+}
+
+p {
+    font-family: 'Amatic SC';
+    color: snow;
+}
+
+.btn {
+    font-family: 'Amatic SC';
+    color: snow;
+}
