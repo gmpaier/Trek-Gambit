@@ -19,9 +19,10 @@ function Nav() {
         } else {
           let i = Math.floor(Math.random() * 467) ;
           let result = res.data.data[i].parkCode;
+          console.log("Executing")
           setParkCode(result)
         }
-      })})
+      })}, [])
     
 
     return (
