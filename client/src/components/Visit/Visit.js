@@ -25,8 +25,8 @@ const Visit = props => {
 
     return (
         <div id = "half">
-        <form>
             <br />
+        <form>
             <div className="form-group halfvisit rounded-3 p-1">
 
                 <label className="visit-status"><h3>Visit Status</h3></label>
@@ -61,11 +61,11 @@ const Visit = props => {
                 <br></br>
                 <select name="rating-list" id="rating-list">
                     <option value="">-- Select --</option>
-                    <option value="1">⭐</option>
-                    <option value="2">⭐⭐</option>
-                    <option value="3">⭐⭐⭐</option>
-                    <option value="4">⭐⭐⭐⭐</option>
-                    <option value="5">⭐⭐⭐⭐⭐</option>
+                    <option value="1">★</option>
+                    <option value="2">★★</option>
+                    <option value="3">★★★</option>
+                    <option value="4">★★★★</option>
+                    <option value="5">★★★★★</option>
                 </select>
                 <br></br>
                 <label className="review"><h3>Review</h3></label>
