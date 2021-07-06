@@ -8,9 +8,9 @@ const ParkInfo = props => {
 
     return (
         <div className = "m-2 p-2 rounded-3 half">
-            <br></br>
+            {/* <br /> */}
             <Row className = "row" id = "parkName">
-                <h1 className = "text-center">{props.name}</h1>
+                <div className = "jumbotron">{props.name}</div>
             </Row>
             <div className = "row">
             {props.images && props.images.splice(0,2).map((image) => {
@@ -21,35 +21,36 @@ const ParkInfo = props => {
             </div>
 
             <Row >
-                <h3>Description: </h3>
+
+                <h2>Description:</h2>
                 <p>{props.description && props.description}</p>
             </Row>
 
             <Row >
-                <h3>Designation: </h3>
+                <h2>Designation:</h2>
                 <p>{props.designation}</p>
             </Row>
 
             <Row >
-                <h3>Fees: </h3>
+                <h2>Fees:</h2>
                 {props.entranceFees && <p>${props.entranceFees[0].cost} - {props.entranceFees[0].description}</p>}
             </Row>
 
             <Row >
-                <h3>Address: </h3>
+                <h2>Address:</h2>
                 {props.addresses && <p>{props.addresses[0].line1}</p>}
                 {props.addresses && <p>{props.addresses[0].city}, {props.addresses[0].stateCode} {props.addresses[0].postalCode}</p>}
             </Row>
             
             <Row >
-                <h3>Weather Info: </h3>
+                <h2>Weather Info:</h2>
                 <p>{props.weatherInfo}</p>
             </Row>
 
 
 
             <Row >
-                <h3>Operating Hours: </h3>
+                <h2>Operating Hours:</h2>
                 {props.operatingHours && <p>Sunday: {props.operatingHours[0].standardHours.sunday}</p>}
                 {props.operatingHours && <p>Monday: {props.operatingHours[0].standardHours.monday}</p>}
                 {props.operatingHours && <p>Tuesday: {props.operatingHours[0].standardHours.tuesday}</p>}
@@ -62,8 +63,9 @@ const ParkInfo = props => {
 
 
             <Row >
-                <h3>Contact: </h3>
+                <h2>Contact:</h2>
                 <p>{props.contacts && <p>Phone Number: {props.contacts.phoneNumbers[0].phoneNumber} <br /> Email: <a href={`mailto:${props.contacts.emailAddresses[0].emailAddress}`}>{props.contacts.emailAddresses[0].emailAddress}</a></p>}</p>
+
             </Row>
         </div>
     )

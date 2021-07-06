@@ -1,4 +1,32 @@
-@import url("https://fonts.googleapis.com/css2?family=Alfa+Slab+One&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Amatic+SC&display=swap");
+
+/* h1.text-center {
+    text-align: center;
+    font-family: 'Amatic SC';
+    font-size:xx-large;
+    font-weight:bolder;
+    color: snow;
+} */
+
+div.jumbotron {
+    text-align: center;
+    font-family: 'Amatic SC';
+    font-size: 90px;
+    font-weight:bolder;
+    color: snow;
+}
+
+h2 {
+    text-align: center;
+    font-family: 'Amatic SC';
+    /* font-size:xx-large; */
+    /* font-weight:bolder; */
+    color: snow;
+}
+
+p {
+    text-align: center;
+}
 
 #parkName {
     text-align: center;
@@ -9,5 +37,6 @@
 }
 
 .half {
-    background-color: rgba(255, 255, 255, 0.6);
+    background-color: #212925;
+    opacity: 78%;
 }

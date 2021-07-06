@@ -9,8 +9,8 @@ function Feed() {
             <div className="card">
                 <div className="card-body">
                     <Row>
-                        <Col size = "2" ></Col>
-                        <Col size = "8">
+                        <Col size = "4" ></Col>
+                        <Col size = "16">
                             <div size = "12" className = "post-bg rounded-3 p-1">
                                 {/* Post Header */}
                                 <Row >
@@ -25,7 +25,7 @@ function Feed() {
                                 {/* Post Photo */}
                                 <Row>
                                     <Col size = "10">
-                                        <img className = "p-3 border post-img" src="https://images.unsplash.com/photo-1519331379826-f10be5486c6f?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1050&q=80" alt="placeholder image" />
+                                        <img className = "" src="https://images.unsplash.com/photo-1519331379826-f10be5486c6f?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1050&q=80" alt="placeholder image" />
                                     </Col>
                                 </Row>
 
