@@ -1,8 +1,30 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import "./style.css";
 import { NavLink } from "react-router-dom";
+import API from "../../utils/API";
+
+
+
+
 
 function Nav() {
+
+    const [parkCode, setParkCode] = useState()
+
+    useEffect(()=> {
+      API.getParkCodes()
+      .then(res => {
+        if (res.data === "error") {
+          throw new Error(res.data.data);
+        } else {
+          let i = Math.floor(Math.random() * 467) ;
+          let result = res.data.data[i].parkCode;
+          console.log("Executing")
+          setParkCode(result)
+        }
+      })}, [])
+    
+
     return (
       <nav className="navbar navbar-expand-lg navbar-dark bg-dark" style={{ opacity: 93 }}>
         <div className="container">
@@ -21,8 +43,11 @@ function Nav() {
                 Search
               </NavLink>
               <NavLink 
-              to = "/development"
+              to = {{
+                pathname: "/park/?parkCode=" + parkCode,
+              }}
               className = "nav-link"
+
               >
                 Random
               </NavLink>
