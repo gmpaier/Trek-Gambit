@@ -46,7 +46,7 @@ const Visit = props => {
           status: status,
           rating: rating
         })
-        .then(res => window.location.reload)
+        .then(res => console.log(res))
         .catch(err => console.log(err))
     }
 

@@ -39,6 +39,9 @@ export default {
   },
   saveVisit: function(visit) {
     return axios.post(host + "/api/visits", visit);
+  },
+  getVisits: function() {
+    return axios.post(host + "/api/visits");
   }
   // getLeadBoard: function() {
   //   return axios.get("/api/leaderboard");
