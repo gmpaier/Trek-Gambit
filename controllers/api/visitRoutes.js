@@ -48,9 +48,11 @@ router.get("/myVisits", async (req, res) => {
 
 router.post("/", async (req,res) => {
   try {
-    const visitData = await Visit.create({});
-    const visit = await visitData.get({ plain: true });
-    res.status(200).json(visit);
+    let visitData = req.body;
+    console.log(visitData);
+    // visitData.user_id = req.session.user_id
+    await Visit.create(visitData);
+    res.status(200);
   }
   catch (err) {
     res.status(400).json(err);

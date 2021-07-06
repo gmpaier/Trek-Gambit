@@ -37,6 +37,9 @@ export default {
   savePark: function(parkData) {
     return axios.post(host + "/api/parks", parkData);
   },
+  saveVisit: function(visit) {
+    return axios.post(host + "/api/visits", visit);
+  }
   // getLeadBoard: function() {
   //   return axios.get("/api/leaderboard");
   // }

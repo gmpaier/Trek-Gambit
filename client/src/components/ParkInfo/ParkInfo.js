@@ -1,28 +1,9 @@
 import React, { useEffect, useState } from "react";
-// import API from "../../utils/API";
 import { Row, Col } from "../Grid";
 import "./ParkInfo.css";
 
 
 const ParkInfo = props => {
-
-    // const [props, setData] = useState([])
-
-    // useEffect( () => {
-
-    //     API.getIndividualPark(props.parkCode)
-    //     .then(res => {
-    //         if (res.data.data === "error") {
-    //             throw new Error(res.data.data);
-    //         }
-    //         else {
-    //             let results = res.data.data[0];
-    //             setData(results);
-    //             }
-    //         }
-    //     )
-    // }, [])
-
 
 
     return (
