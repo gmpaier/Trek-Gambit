@@ -4,6 +4,7 @@ import { Container, Col, Row } from "../Grid";
 // import PostComment from "../Comment/Comment";
 
 const Feed = props => {
+    console.log(props); 
     return (props.visits.length === 0) ? (
         <div className="card">
         <div className="card-body player">
@@ -25,26 +26,26 @@ const Feed = props => {
 
                                         {/* Post Header */}
                                         <Row >
-                                            <Col size = "4">
-                                            <h1 className = "text-white p-2 postTitle">User's Name</h1>
+                                            <Col size = "12">
+                                            <h1 className = "text-white text-center p-2 postTitle">User's Name</h1>
                                             </Col>
-                                            <Col size = "8">
-                                            <h1 className = "text-end text-white p-2 postTime">Posted: {new Date().toLocaleTimeString()}</h1>   
+                                            <Col size = "12">
+                                            <h1 className = "text-center text-white p-2 postTime">Posted: {new Date().toLocaleTimeString()}</h1>   
                                             </Col>
                                         </Row>
         
                                         {/* Post Photo */}
                                         <Row>
                                             <Col size = "10">
-                                                <img src="https://images.unsplash.com/photo-1519331379826-f10be5486c6f?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1050&q=80" alt="placeholder image" />
+                                                <img src= {visit.image} alt="placeholder" />
                                             </Col>
                                         </Row>
         
                                         <Row>
                                             <Col size = "10">
                                                 <br />
-                                                <h2 className = "text-left" >Park Name: Review </h2><br />
-                                                <h3 className = "text-left" >Park Name: Review </h3>
+                                                <h2>{visit.park} - {visit.status}</h2><br />
+                                                <h3>Rating: {visit.rating}/5</h3>
                                             </Col>
                                         </Row>
         
@@ -53,8 +54,8 @@ const Feed = props => {
                                         <Row >
                                             <Col size = "1"></Col>
                                             <Col size = "10">
-                                                <p className = "text-white mt-2">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed ac ultricies nisl, in volutpat lacus. Donec congue, lectus id porta congue, dui risus fringilla magna, et auctor risus velit sed libero. Donec ut risus ac ligula congue dictum nec in enim. Donec auctor vestibulum ultricies. Sed cursus tempor lobortis. Vivamus vulputate feugiat orci, pretium dapibus lectus. Integer at rutrum purus, in condimentum mauris. Nullam pellentesque mollis ex, ac sollicitudin velit aliquam id.
-                                                <br /><br />Aliquam metus nisl, convallis sed dolor eu, ullamcorper dapibus lorem. Phasellus elementum tortor eget imperdiet faucibus. Nam auctor pretium nunc. Nulla dignissim libero vitae nunc venenatis, ut cursus mi ultrices. Cras pretium lobortis posuere. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Integer tristique pharetra leo. Donec sed hendrerit felis. Nam gravida imperdiet quam sagittis imperdiet. In porta maximus quam eget lacinia. Etiam hendrerit porta aliquet. Duis quis facilisis mi, sed efficitur ante. Proin velit mi, convallis eget nisi in, ullamcorper accumsan tortor.</p>
+                                                <h3>Review: </h3>
+                                                <p className = "text-white mt-2">{visit.body}</p>
                                             </Col>
                                             <Col size = "1"></Col>
                                         </Row>
@@ -69,8 +70,6 @@ const Feed = props => {
                                     
                                     )
                                 })}
-
-
                         </Col>
 
                         <Col size = "2" ></Col>

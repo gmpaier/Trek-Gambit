@@ -3,6 +3,8 @@ import API from "../../utils/API";
 import "./visit.css";
 
 const Visit = props => {
+
+    console.log(props);
     
     const [activity, setActivity] = useState("");
     const [actLength, setActLength] = useState("");
