@@ -38,13 +38,14 @@ const Visit = props => {
     const handleSubmit = event => {
         event.preventDefault();
         API.saveVisit({
-          parkCode: props.parkCode,
+          park: props.name,
           activity: activity,
           length: actLength,
           unit: unit,
           body: body,
           status: status,
-          rating: rating
+          rating: rating,
+          image: props.images[0].url
         })
         .then(res => console.log(res))
         .catch(err => console.log(err))

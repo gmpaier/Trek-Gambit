@@ -25,7 +25,7 @@ Visit.init(
     //     key: 'id',
     //   },
     // },
-    park_code: {
+    park: {
       type: DataTypes.STRING
     },
     activity: {
@@ -56,6 +56,9 @@ Visit.init(
     },
     rating: {
       type: DataTypes.INTEGER
+    },
+    image: {
+      type: DataTypes.STRING
     }
   },
   {

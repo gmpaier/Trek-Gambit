@@ -47,7 +47,8 @@ class Park extends Component {
                 <Col size = "4">
                     <Visit 
                     activities = {this.state.data.activities}
-                    parkCode = {parkCode}
+                    name = {this.state.data.name}
+                    images = {this.state.data.images}
                     />
                 </Col>
             </Row>
