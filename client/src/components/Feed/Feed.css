@@ -15,10 +15,12 @@ h2.text-left {
 
 .postTime {
     font-family: 'Amatic SC';
-    font-size: 1.5rem;
+    font-size: 2rem;
 }
 
 div.card {
     background-color: #212925;
     opacity: 78%;
 }
+
+
