@@ -4,11 +4,10 @@ import Splash from "./pages/Splash";
 import './App.css';
 import Home from "./pages/Home";
 import Register from "./pages/Register/Register"
-
 // import Random from "./components/Random";
 import Search from "./pages/Search";
 import Park from "./pages/Park";
-// import Compare from "./components/Compare";
+import Compare from "./pages/Compare/Compare";
 import Leaderboard from "./pages/Leaderboard/Leaderboard";
 import Development from "./pages/Development/Development";
 
@@ -25,7 +24,7 @@ function App() {
         <Route path = "/development" component = {Development} />
         <Route path = "/random" component = {Park} />
         <Route path = "/park" component = {Park} />
-        {/* <Route path = "/compare" component = {ParkOrNot} />  */}
+        <Route path = "/compare" component = {Compare} /> 
         <Route path = "/leaderboard" component = {Leaderboard} />
       </Switch>
     </Router>
