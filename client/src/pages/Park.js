@@ -39,14 +39,16 @@ class Park extends Component {
                     description = {this.state.data.description}
                     designation = {this.state.data.designation}
                     entranceFees = {this.state.data.entranceFees}
-                    addresses = {this.state.data.entranceFees}
+                    addresses = {this.state.data.addresses}
                     weatherInfo = {this.state.data.weatherInfo}
                     operatingHours = {this.state.data.operatingHours}
                     contacts = {this.state.data.contacts}/>
                 </Col>
                 <Col size = "4">
                     <Visit 
-                    activities = {this.state.data.activities}/>
+                    activities = {this.state.data.activities}
+                    parkCode = {parkCode}
+                    />
                 </Col>
             </Row>
         </Container>

@@ -2,12 +2,18 @@ const express = require("express");
 const session = require('express-session');
 const routes = require("./controllers");
 const myParser = require("body-parser");
-
+const cors = require("cors");
 const sequelize = require('./config/connection');
 const SequelizeStore = require('connect-session-sequelize')(session.Store);
 
+
+
 const app = express();
 const PORT = process.env.PORT || 3001;
+
+var corsOptions = {
+  origin: "http://localhost:3000"
+};
 
 const sess = {
   secret: 'Super duper secret secret',
@@ -20,6 +26,7 @@ const sess = {
 };
 
 // Define middleware here
+app.use(cors(corsOptions));
 app.use(myParser.json({limit: '200mb'}));
 app.use(myParser.urlencoded({limit: '200mb', extended: true}));
 

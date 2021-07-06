@@ -18,21 +18,27 @@ Visit.init(
         key: 'id',
       },
     },
-    park_id: {
-      type: DataTypes.INTEGER,
-      references: {
-        model: 'park',
-        key: 'id',
-      },
+    // park_id: {
+    //   type: DataTypes.INTEGER,
+    //   references: {
+    //     model: 'park',
+    //     key: 'id',
+    //   },
+    // },
+    park_code: {
+      type: DataTypes.STRING
     },
-    activity_id: {
-      type: DataTypes.INTEGER,
-      allowNull: false,
-      references: {
-        model: 'activity',
-        key: 'id',
-      },
+    activity: {
+      type: DataTypes.STRING
     },
+    // activity_id: {
+    //   type: DataTypes.INTEGER,
+    //   allowNull: false,
+    //   references: {
+    //     model: 'activity',
+    //     key: 'id',
+    //   },
+    // },
     length: {
       type: DataTypes.DECIMAL(4,1),
       allowNull: false,
@@ -44,6 +50,12 @@ Visit.init(
     body: {
       type: DataTypes.TEXT,
       allowNull: false
+    },
+    status: {
+      type: DataTypes.STRING
+    },
+    rating: {
+      type: DataTypes.INTEGER
     }
   },
   {
