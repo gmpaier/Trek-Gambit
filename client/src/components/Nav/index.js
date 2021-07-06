@@ -52,7 +52,7 @@ function Nav() {
                 Random
               </NavLink>
               <NavLink 
-              to = "/development"
+              to = "/compare"
               className = "nav-link"
               >
                 Park Or Not
