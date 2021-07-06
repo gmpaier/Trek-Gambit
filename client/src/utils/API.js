@@ -1,6 +1,8 @@
 import axios from "axios";
 import dotenv from "dotenv";
 
+const host = "http://localhost:3001"
+
 export default {
 
   // Get park from nps search 
@@ -20,20 +22,20 @@ export default {
 
   // Gets all parks
   getParks: function() {
-    return axios.get("/api/parks");
+    return axios.get(host + "/api/parks");
   },
 
   // Gets the park with the given id
   getPark: function(id) {
-    return axios.get("/api/parks/" + id);
+    return axios.get(host + "/api/parks/" + id);
   },
   // Deletes the park with the given id
   deletePark: function(id) {
-    return axios.delete("/api/park/" + id);
+    return axios.delete(host + "/api/park/" + id);
   },
   // Saves a park to the database
   savePark: function(parkData) {
-    return axios.post("/api/parks", parkData);
+    return axios.post(host + "/api/parks", parkData);
   },
   // getLeadBoard: function() {
   //   return axios.get("/api/leaderboard");
