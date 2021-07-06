@@ -88,14 +88,14 @@ Visit.belongsTo(User, {
   foreignKey: "user_id"
 });
 
-Park.hasMany(Visit, {
-  foreignKey: 'park_id',
-  onDelete: 'SET NULL'
-});
+// Park.hasMany(Visit, {
+//   foreignKey: 'park_id',
+//   onDelete: 'SET NULL'
+// });
 
-Visit.belongsTo(Park, {
-  foreignKey: 'park_id'
-});
+// Visit.belongsTo(Park, {
+//   foreignKey: 'park_id'
+// });
 
 Visit.hasMany(VisitMedia, {
   foreignKey: 'visit_id',
@@ -106,14 +106,14 @@ VisitMedia.belongsTo(Visit, {
   foreignKey: 'visit_id'
 });
 
-Activity.hasMany(Visit, {
-  foreignKey: 'activity_id',
-  onDelete: 'CASCADE'
-});
+// Activity.hasMany(Visit, {
+//   foreignKey: 'activity_id',
+//   onDelete: 'CASCADE'
+// });
 
-Visit.belongsTo(Activity, {
-  foreignKey: 'activity_id'
-})
+// Visit.belongsTo(Activity, {
+//   foreignKey: 'activity_id'
+// })
 
 User.hasMany(UserPark, {
   foreignKey: 'user_id',
