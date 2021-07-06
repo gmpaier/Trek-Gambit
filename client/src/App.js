@@ -5,6 +5,7 @@ import './App.css';
 import Home from "./pages/Home";
 import Register from "./pages/Register/Register"
 // import Random from "./components/Random";
+import Profile from "./pages/Profile/Profile"
 import Search from "./pages/Search";
 import Park from "./pages/Park";
 import Compare from "./pages/Compare/Compare";
@@ -26,6 +27,7 @@ function App() {
         <Route path = "/park" component = {Park} />
         <Route path = "/compare" component = {Compare} /> 
         <Route path = "/leaderboard" component = {Leaderboard} />
+        <Route path = "/profile" component = {Profile} />
       </Switch>
     </Router>
 

@@ -1,5 +1,4 @@
 import React from "react";
-// import { Container } from "../Grid";
 import "./Banner.css"
 
 function Banner() {
