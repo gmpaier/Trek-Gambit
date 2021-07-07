@@ -28,6 +28,9 @@ Visit.init(
     park: {
       type: DataTypes.STRING
     },
+    date: {
+      type: DataTypes.STRING
+    },
     activity: {
       type: DataTypes.STRING
     },

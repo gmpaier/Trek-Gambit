@@ -48,6 +48,7 @@ router.get("/myVisits", async (req, res) => {
 
 router.post("/", async (req,res) => {
   try {
+    console.log("in post")
     let visitData = req.body;
     // visitData.user_id = req.session.user_id
     await Visit.create(visitData);

@@ -38,6 +38,7 @@ const Visit = props => {
     }
 
     const handleSubmit = event => {
+        let dt = new Date();
         event.preventDefault();
         API.saveVisit({
           park: props.name,
@@ -45,6 +46,7 @@ const Visit = props => {
           length: actLength,
           unit: unit,
           body: body,
+          date: dt.toDateString(),
           status: status,
           rating: rating,
           image: props.images[0].url
