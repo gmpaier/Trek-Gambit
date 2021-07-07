@@ -1,4 +1,4 @@
-import React, { Component, setState } from "react";
+import React, { Component} from "react";
 import API from "../../utils/API";
  
 class SignUp extends Component {
@@ -68,12 +68,12 @@ class SignUp extends Component {
 
                 <div className="form-group">
                     <label>Email</label>
-                    <input type="email" className="form-control" name = "email" placeholder="Enter email" onChange={this.handlePassword}/>
+                    <input type="email" className="form-control" name = "email" placeholder="Enter email" onChange={this.handleEmail}/>
                 </div>
 
                 <div className="form-group">
                     <label>Password</label>
-                    <input type="password" className="form-control" name = "password" placeholder="Enter password" onChange={this.handleEmail} />
+                    <input type="password" className="form-control" name = "password" placeholder="Enter password" onChange={this.handlePassword} />
                 </div>
 
                 <button type="submit" className="btn btn-dark btn-lg btn-block" >Register</button>

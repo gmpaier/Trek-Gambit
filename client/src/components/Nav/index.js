@@ -57,6 +57,7 @@ function Nav() {
               >
                 Park Or Not
               </NavLink>
+              
               <NavLink 
               to = "/leaderboard"
               className = "nav-link"

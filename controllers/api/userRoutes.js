@@ -22,7 +22,7 @@ router.post('/login', async (req, res) => {
       req.session.first = validEmail.first_name
       req.session.last = validEmail.last_name
       
-     
+
       res.status(200)
   } catch (err) {
       res.status(400).json(err);
