@@ -50,7 +50,9 @@ router.post("/", async (req,res) => {
   try {
     console.log("in post")
     let visitData = req.body;
-    // visitData.user_id = req.session.user_id
+    if (req.session){
+      visitData.user_id = req.session.user_id
+    }
     await Visit.create(visitData);
     console.log("visit post successful");
     res.status(200).json(visitData);
