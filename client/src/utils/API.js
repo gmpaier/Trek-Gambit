@@ -1,5 +1,4 @@
 import axios from "axios";
-import dotenv from "dotenv";
 
 const host = "http://localhost:3001"
 
@@ -50,7 +49,7 @@ export default {
     return axios.post(host + "/api/users/signup", user);
   },
   login: function(user) {
-    return axios.post(host + "api/users/login", user);
+    return axios.post(host + "/api/users/login", user);
   }
   // getLeadBoard: function() {
   //   return axios.get("/api/leaderboard");

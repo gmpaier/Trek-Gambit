@@ -61,9 +61,9 @@ class Login extends Component {
                 </div>
 
                 <button type="submit" className="btn btn-dark btn-lg btn-block">Sign in</button>
-                <p className="forgot-password text-right">
-                    Forgot <a href="#">password?</a>
-                </p>
+                {/* <p className="forgot-password text-right">
+                    Forgot <a href="/login">password?</a>
+                </p> */}
             </form>
         );
     }
