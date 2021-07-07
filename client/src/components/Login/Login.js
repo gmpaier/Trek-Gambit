@@ -4,12 +4,8 @@ import "./style.css";
 class Login extends Component {
     render() {
         return (
-            <form>
-                <br />
-                <br />
-                <br />
-                <br />
-                <br />
+            <form className>
+
                 <div className="jumbotron">Login</div>
 
                 <div className="form-group">

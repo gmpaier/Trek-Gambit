@@ -30,7 +30,7 @@ const Feed = props => {
                                             <h1 className = "text-white text-center p-2 postTitle">User's Name</h1>
                                             </Col>
                                             <Col size = "12">
-                                            <h1 className = "text-center text-white p-2 postTime">Posted: {new Date().toLocaleTimeString()}</h1>   
+                                            <h1 className = "text-center text-white p-2 postTime">Posted: {visit.date}</h1>   
                                             </Col>
                                         </Row>
         
@@ -54,8 +54,9 @@ const Feed = props => {
                                         <Row >
                                             <Col size = "1"></Col>
                                             <Col size = "10">
-                                                <h3>Review: </h3>
-                                                <p className = "text-white mt-2">{visit.body}</p>
+                                                <h3>Activity: {visit.activity} for {visit.length} {visit.unit}</h3>
+                                                <h3 className = "text-white mt-2">"{visit.body}"</h3>
+                                               
                                             </Col>
                                             <Col size = "1"></Col>
                                         </Row>
