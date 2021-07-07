@@ -1,5 +1,5 @@
-import React, { useEffect, useState } from "react";
-import { Row, Col } from "../Grid";
+import React from "react";
+import { Row } from "../Grid";
 import "./ParkInfo.css";
 
 

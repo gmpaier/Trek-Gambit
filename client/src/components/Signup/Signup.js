@@ -78,7 +78,7 @@ class SignUp extends Component {
 
                 <button type="submit" className="btn btn-dark btn-lg btn-block" >Register</button>
                 <p className="forgot-password text-right">
-                    Already signed up? <a href="#">login?</a>
+                    Already signed up? <a href="/login">login?</a>
                 </p>
             </form>
         );

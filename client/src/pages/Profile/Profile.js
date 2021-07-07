@@ -32,7 +32,7 @@ render() {
         return (
             <Container fluid>
                 <ProfileBanner />
-                {/* <Feed visits = {this.state.savedVisits}/> */}
+                <Feed visits = {this.state.savedVisits}/>
             </Container>
         )
     }
