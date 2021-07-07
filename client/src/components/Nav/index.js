@@ -63,6 +63,12 @@ function Nav() {
               >
                 Leaderboard
               </NavLink>
+              <NavLink 
+              to = "/Login"
+              className = "nav-link"
+              >
+                Login
+              </NavLink>
             </div>
           </div>
         </div>
