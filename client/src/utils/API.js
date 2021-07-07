@@ -44,10 +44,13 @@ export default {
     return axios.get(host + "/api/visits");
   },
   getMyVisits: function() {
-    return axios.get(host + "/api/visits:id");
+    return axios.get(host + "/api/visits/myVisits");
   },
   signup: function(user) {
     return axios.post(host + "/api/users/signup", user);
+  },
+  login: function(user) {
+    return axios.post(host + "api/users/login", user);
   }
   // getLeadBoard: function() {
   //   return axios.get("/api/leaderboard");
