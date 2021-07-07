@@ -43,6 +43,12 @@ function Nav() {
                 Search
               </NavLink>
               <NavLink 
+              to = "/profile"
+              className = "nav-link"
+              >
+                Profile
+              </NavLink>
+              <NavLink 
               to = {{
                 pathname: "/park/?parkCode=" + parkCode,
               }}
