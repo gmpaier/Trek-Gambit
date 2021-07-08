@@ -23,48 +23,48 @@ const ParkInfo = props => {
             <Row >
 
                 <h2>Description:</h2>
-                <p>{props.description && props.description}</p>
+                <h3>{props.description && props.description}</h3>
             </Row>
 
             <Row >
                 <h2>Designation:</h2>
-                <p>{props.designation}</p>
+                <h3>{props.designation}</h3>
             </Row>
 
             <Row >
                 <h2>Fees:</h2>
-                {props.entranceFees && <p>${props.entranceFees[0].cost} - {props.entranceFees[0].description}</p>}
+                {props.entranceFees && <h3>${props.entranceFees[0].cost} - {props.entranceFees[0].description}</h3>}
             </Row>
 
             <Row >
                 <h2>Address:</h2>
-                {props.addresses && <p>{props.addresses[0].line1}</p>}
-                {props.addresses && <p>{props.addresses[0].city}, {props.addresses[0].stateCode} {props.addresses[0].postalCode}</p>}
+                {props.addresses && <h3>{props.addresses[0].line1}</h3>}
+                {props.addresses && <h3>{props.addresses[0].city}, {props.addresses[0].stateCode} {props.addresses[0].postalCode}</h3>}
             </Row>
             
             <Row >
                 <h2>Weather Info:</h2>
-                <p>{props.weatherInfo}</p>
+                <h3>{props.weatherInfo}</h3>
             </Row>
 
 
 
             <Row >
                 <h2>Operating Hours:</h2>
-                {props.operatingHours && <p>Sunday: {props.operatingHours[0].standardHours.sunday}</p>}
-                {props.operatingHours && <p>Monday: {props.operatingHours[0].standardHours.monday}</p>}
-                {props.operatingHours && <p>Tuesday: {props.operatingHours[0].standardHours.tuesday}</p>}
-                {props.operatingHours && <p>Wednesday: {props.operatingHours[0].standardHours.wednesday}</p>}
-                {props.operatingHours && <p>Thursday: {props.operatingHours[0].standardHours.thursday}</p>}
-                {props.operatingHours && <p>Friday: {props.operatingHours[0].standardHours.friday}</p>}
-                {props.operatingHours && <p>Saturday: {props.operatingHours[0].standardHours.saturday}</p>}
-                {props.operatingHours && <p>{props.operatingHours[0].description}</p>}
+                {props.operatingHours && <h3>Sunday: {props.operatingHours[0].standardHours.sunday}</h3>}
+                {props.operatingHours && <h3>Monday: {props.operatingHours[0].standardHours.monday}</h3>}
+                {props.operatingHours && <h3>Tuesday: {props.operatingHours[0].standardHours.tuesday}</h3>}
+                {props.operatingHours && <h3>Wednesday: {props.operatingHours[0].standardHours.wednesday}</h3>}
+                {props.operatingHours && <h3>Thursday: {props.operatingHours[0].standardHours.thursday}</h3>}
+                {props.operatingHours && <h3>Friday: {props.operatingHours[0].standardHours.friday}</h3>}
+                {props.operatingHours && <h3>Saturday: {props.operatingHours[0].standardHours.saturday}</h3>}
+                {props.operatingHours && <h3>{props.operatingHours[0].description}</h3>}
             </Row>
 
 
             <Row >
                 <h2>Contact:</h2>
-                <p>{props.contacts && <p>Phone Number: {props.contacts.phoneNumbers[0].phoneNumber} <br /> Email: <a href={`mailto:${props.contacts.emailAddresses[0].emailAddress}`}>{props.contacts.emailAddresses[0].emailAddress}</a></p>}</p>
+                <h3>{props.contacts && <h3>Phone Number: {props.contacts.phoneNumbers[0].phoneNumber} <br /> Email: <a href={`mailto:${props.contacts.emailAddresses[0].emailAddress}`}>{props.contacts.emailAddresses[0].emailAddress}</a></h3>}</h3>
 
             </Row>
         </div>
