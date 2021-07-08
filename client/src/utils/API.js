@@ -45,6 +45,12 @@ export default {
   getMyVisits: function() {
     return axios.get(host + "/api/visits/myVisits");
   },
+  getCountByUser: function() {
+    return axios.get(host + "/api/visits/byUser");
+  },
+  getCountByPark: function() {
+    return axios.get(host + "/api/visits/byPark");
+  },
   signup: function(user) {
     return axios.post(host + "/api/users/signup", user);
   },
