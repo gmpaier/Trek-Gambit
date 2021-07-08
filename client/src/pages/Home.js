@@ -27,6 +27,7 @@ class Home extends Component {
 
 
 render() {
+
         return (
             <Container fluid>
                 <Banner />

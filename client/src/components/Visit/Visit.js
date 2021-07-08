@@ -1,10 +1,9 @@
 import React, {useState} from "react";
 import API from "../../utils/API";
 import "./visit.css";
+import Cookies from "js-cookie";
 
 const Visit = props => {
-
-    console.log(props);
     
     const [activity, setActivity] = useState("");
     const [actLength, setActLength] = useState("");
@@ -38,13 +37,17 @@ const Visit = props => {
     }
 
     const handleSubmit = event => {
-        let dt = new Date();
         event.preventDefault();
+        let dt = new Date();
+        let id = Cookies.get("id");
+        console.log(id);
+
         API.saveVisit({
           park: props.name,
           activity: activity,
           length: actLength,
           unit: unit,
+          user_id: id,
           body: body,
           date: dt.toDateString(),
           status: status,

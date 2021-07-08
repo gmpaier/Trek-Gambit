@@ -2,10 +2,11 @@ import React from "react";
 import "./Banner.css"
 
 function Banner() {
+
     return (
         <div className="jumbotron">
             <br />
-            National Parks
+            Trek Gambit : Home Feed
         </div>
     )
 }
