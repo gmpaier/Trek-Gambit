@@ -19,11 +19,11 @@ const Feed = props => {
             <div className="card">
                 <div className="card-body">
                 <Row>
-                        <Col size = "4" ></Col>
-                        <Col size = "16">
+                        <Col size = "1" ></Col>
+                        <Col size = "10">
                         {props.visits.map(visit => {
                                     return Cookies.get("id") && (
-                                        <div size = "12" className = "post-bg rounded-3 p-1 border mb-3">
+                                        <div className = "post-bg rounded-3 p-1 border mb-3">
 
                                         {/* Post Header */}
                                         <Row >
@@ -37,8 +37,8 @@ const Feed = props => {
         
                                         {/* Post Photo */}
                                         <Row>
-                                            <Col size = "10">
-                                                <img src= {visit.image} alt="placeholder" />
+                                            <Col size = "6" className = "mw-50">
+                                                <img  src= {visit.image} alt="placeholder" />
                                             </Col>
                                         </Row>
         
@@ -74,7 +74,7 @@ const Feed = props => {
                                 })}
                         </Col>
 
-                        <Col size = "2" ></Col>
+                        <Col size = "1" ></Col>
                     </Row>
                 </div>
             </div>
