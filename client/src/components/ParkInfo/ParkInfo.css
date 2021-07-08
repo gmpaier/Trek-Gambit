@@ -1,13 +1,5 @@
 @import url("https://fonts.googleapis.com/css2?family=Amatic+SC&display=swap");
 
-/* h1.text-center {
-    text-align: center;
-    font-family: 'Amatic SC';
-    font-size:xx-large;
-    font-weight:bolder;
-    color: snow;
-} */
-
 div.jumbotron {
     text-align: center;
     font-family: 'Amatic SC';
@@ -17,6 +9,14 @@ div.jumbotron {
 }
 
 h2 {
+    text-align: center;
+    font-family: 'Amatic SC';
+    /* font-size:xx-large; */
+    /* font-weight:bolder; */
+    color: snow;
+}
+
+h3 {
     text-align: center;
     font-family: 'Amatic SC';
     /* font-size:xx-large; */
