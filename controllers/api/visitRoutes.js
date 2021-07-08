@@ -79,9 +79,11 @@ router.get("/byPark", async (req, res) => {
         'park',
         [sequelize.fn('COUNT', sequelize.col('id')), 'visitCount']
       ],
-      group: ['park'] 
+      group: ['park'],
+      order: [
+        [sequelize.fn('COUNT', sequelize.col('id')), 'asc']
+      ] 
   });
-    console.log("through visits")
     const visits = visitData.map((visit) => visit.get({ plain: true }));
     res.status(200).json(visits);
   }
