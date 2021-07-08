@@ -7,7 +7,8 @@ function ProfileBanner() {
     return (
         <div className="jumbotron">
             <br />
-            Welcome, {Cookies.get("name")}
+            {Cookies.get("id") && "Welcome, " + Cookies.get("name")}
+            {!Cookies.get("id") && "Sign Up and Log In to view this feature!"}
         </div>
     )
 }

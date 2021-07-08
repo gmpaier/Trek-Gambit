@@ -2,6 +2,7 @@ import React, { useEffect, useState } from "react";
 import "./style.css";
 import { NavLink } from "react-router-dom";
 import API from "../../utils/API";
+import Cookies from "js-cookie"
 
 
 
@@ -23,7 +24,12 @@ function Nav() {
           setParkCode(result)
         }
       })}, [])
-    
+
+      function deleteAll() {
+        Cookies.remove("id");
+        Cookies.remove("name");
+        Cookies.remove("last_name");
+      }
 
     return (
       <nav className="navbar navbar-expand-lg navbar-dark bg-dark" style={{ opacity: 93 }}>
@@ -36,33 +42,36 @@ function Nav() {
               >
                 Home
               </NavLink>
-              <NavLink 
+
+              {Cookies.get("id") &&<NavLink 
               to = "/search"
               className = "nav-link"
               >
                 Search
-              </NavLink>
+              </NavLink>}
+              
               <NavLink 
               to = "/profile"
               className = "nav-link"
               >
                 Profile
               </NavLink>
-              <NavLink 
+
+              {Cookies.get("id") &&<NavLink 
               to = {{
                 pathname: "/park/?parkCode=" + parkCode,
               }}
               className = "nav-link"
-
               >
                 Random
-              </NavLink>
-              <NavLink 
+              </NavLink>}
+
+              {Cookies.get("id") &&<NavLink 
               to = "/compare"
               className = "nav-link"
               >
                 Park Or Not
-              </NavLink>
+              </NavLink>}
               
               <NavLink 
               to = "/leaderboard"
@@ -70,12 +79,14 @@ function Nav() {
               >
                 Leaderboard
               </NavLink>
-              <NavLink 
+              
+              {!Cookies.get("id") && <NavLink 
               to = "/Login"
               className = "nav-link"
               >
                 Login
-              </NavLink>
+              </NavLink>}
+              {Cookies.get("id") && <NavLink to = "/home" className = "nav-link" onClick = {() => deleteAll()}>Logout</NavLink>} 
             </div>
           </div>
         </div>
