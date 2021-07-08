@@ -6,13 +6,12 @@ const cors = require("cors");
 const sequelize = require('./config/connection');
 const SequelizeStore = require('connect-session-sequelize')(session.Store);
 
-
-
 const app = express();
 const PORT = process.env.PORT || 3001;
 
 var corsOptions = {
-  origin: "http://localhost:3000"
+  origin: "http://localhost:3000",
+  credentials: true
 };
 
 const sess = {
@@ -26,6 +25,7 @@ const sess = {
 };
 
 // Define middleware here
+app.use(session(sess));
 app.use(cors(corsOptions));
 app.use(myParser.json({limit: '200mb'}));
 app.use(myParser.urlencoded({limit: '200mb', extended: true}));
@@ -36,7 +36,6 @@ if (process.env.NODE_ENV === "production") {
 }
 // Add routes, both API and view
 app.use(routes);
-
 
 // Start the API server
 sequelize.sync({ force: false }).then(() => {

@@ -3,16 +3,17 @@ import API from "../../utils/API";
 import { Container} from "../../components/Grid";
 import ProfileBanner from "../../components/Profile/ProfileBanner";
 import Feed from "../../components/Feed/Feed";
+import Cookies from "js-cookie"
 
 class Profile extends Component {
 
     state = {
-        savedVisits: []
+        savedVisits: [],
+        id: Cookies.get("id")
     };
 
-    
-
     componentDidMount() {
+        console.log(this.state.id);
     API.getMyVisits()
     .then(res => {
         if (res.data.data === "error") {
@@ -25,8 +26,6 @@ class Profile extends Component {
         })
         .catch(err => console.log(err))
     }
-
-
 
 render() {
         return (

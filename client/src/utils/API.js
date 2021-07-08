@@ -1,4 +1,5 @@
 import axios from "axios";
+import Cookies from "js-cookie"
 
 const host = "http://localhost:3001"
 
@@ -43,13 +44,13 @@ export default {
     return axios.get(host + "/api/visits");
   },
   getMyVisits: function() {
-    return axios.get(host + "/api/visits/myVisits");
+    return axios.get(host + "/api/visits/myVisits", {id: Cookies.get("id")});
   },
   signup: function(user) {
-    return axios.post(host + "/api/users/signup", user);
+    return axios.post(host + "/api/users/signup", user, {withCredentials: true});
   },
   login: function(user) {
-    return axios.post(host + "/api/users/login", user);
+    return axios.post(host + "/api/users/login", user, {withCredentials: true});
   }
   // getLeadBoard: function() {
   //   return axios.get("/api/leaderboard");

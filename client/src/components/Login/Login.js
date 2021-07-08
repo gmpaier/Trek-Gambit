@@ -1,56 +1,51 @@
-import React, { Component } from "react";
+import React, { useState} from "react";
 import API from "../../utils/API";
 import "./style.css";
+import Cookies from "js-cookie"
 
-class Login extends Component {
+const Login = props => {
 
-    constructor (props) {
-        super(props);
-        this.state = {
-            email: "",
-            password: "",
-        };
+    const [email, setEmail] = useState("");
+    const [password, setPassword] = useState("");
 
-        this.handleEmail = this.handleEmail.bind(this);
-        this.handlePassword = this.handlePassword.bind(this);
-        this.handleSubmit = this.handleSubmit.bind(this);
+    const handlePassword = event => {
+        setPassword(event.target.value);
     }
 
-    handlePassword(event) {
-        this.setState({password: event.target.value});
+    const handleEmail = event => {
+        setEmail(event.target.value);
     }
 
-    handleEmail(event) {
-        this.setState({email: event.target.value});
-    }
-
-    handleSubmit(event) {
+    const handleSubmit = event => {
         event.preventDefault();
         console.log(
-            this.state.email, this.state.password
+            email, password,
         )
         API.login({
-            email: this.state.email,
-            password: this.state.password
+            email: email,
+            password: password
         })
-        .then(res=>console.log(res))
+        .then(function (res) {
+            Cookies.set("name", res.data.first_name);
+            Cookies.set("id", res.data.id);
+            Cookies.set("last_name", res.data.last_name);
+        })
         .catch(err=> console.log(err))
     }
 
-    render() {
         return (
-            <form onSubmit={this.handleSubmit}>
+            <form onSubmit={handleSubmit}>
 
                 <div className="jumbotron">Login</div>
 
                 <div className="form-group">
                     <label>Email</label>
-                    <input type="email" className="form-control" placeholder="Enter email" onChange={this.handleEmail}/>
+                    <input type="email" className="form-control" placeholder="Enter email" onChange={handleEmail}/>
                 </div>
 
                 <div className="form-group">
                     <label>Password</label>
-                    <input type="password" className="form-control" placeholder="Enter password" onChange={this.handlePassword} />
+                    <input type="password" className="form-control" placeholder="Enter password" onChange={handlePassword} />
                 </div>
 
                 <div className="form-group">
@@ -60,13 +55,12 @@ class Login extends Component {
                     </div>
                 </div>
 
-                <button type="submit" className="btn btn-dark btn-lg btn-block">Sign in</button>
+                <button type="submit" className="btn btn-dark btn-lg btn-block">Submit</button>
                 {/* <p className="forgot-password text-right">
                     Forgot <a href="/login">password?</a>
                 </p> */}
             </form>
-        );
-    }
+        ); 
 }
 
 export default Login;

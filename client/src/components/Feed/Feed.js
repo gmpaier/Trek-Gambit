@@ -1,6 +1,7 @@
 import React from "react";
 import "./Feed.css"
 import { Container, Col, Row } from "../Grid";
+import Cookies from "js-cookie";
 // import PostComment from "../Comment/Comment";
 
 const Feed = props => {
@@ -27,7 +28,7 @@ const Feed = props => {
                                         {/* Post Header */}
                                         <Row >
                                             <Col size = "12">
-                                            <h1 className = "text-white text-center p-2 postTitle">User's Name</h1>
+                                            <h1 className = "text-white text-center p-2 postTitle">{Cookies.get("name") + ' ' + Cookies.get("last_name")}</h1>
                                             </Col>
                                             <Col size = "12">
                                             <h1 className = "text-center text-white p-2 postTime">Posted: {visit.date}</h1>   

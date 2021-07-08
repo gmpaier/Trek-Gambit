@@ -1,11 +1,13 @@
 import React from "react";
-import "./ProfileBanner.css"
+import Cookies from "js-cookie";
+
 
 function ProfileBanner() {
+
     return (
         <div className="jumbotron">
             <br />
-            Welcome, "Username Here"
+            Welcome, {Cookies.get("name")}
         </div>
     )
 }

@@ -1,6 +1,7 @@
 const router = require('express').Router();
 const { Visit} = require('../../models');
 
+
 router.get("/", async (req, res) => {
   try {
     const visitData = await Visit.findAll({});
@@ -37,7 +38,8 @@ router.get("/park/:id", async (req, res) => {
 
 router.get("/myVisits", async (req, res) => {
   try {
-    const visitData = await Visit.findAll({where: { user_id: req.session.user_id}});
+    // console.log(req.params)
+    const visitData = await Visit.findAll({where: { user_id: req.params.id}});
     const visits = visitData.map((visit) => visit.get({ plain: true }));
     res.status(200).json(visits);
   }
@@ -48,11 +50,11 @@ router.get("/myVisits", async (req, res) => {
 
 router.post("/", async (req,res) => {
   try {
-    console.log("in post")
     let visitData = req.body;
-    if (req.session){
-      visitData.user_id = req.session.user_id
-    }
+    console.log(req.body)
+    // if (req.session){
+    //   visitData.user_id = req.session.user_id
+    // }
     await Visit.create(visitData);
     console.log("visit post successful");
     res.status(200).json(visitData);
