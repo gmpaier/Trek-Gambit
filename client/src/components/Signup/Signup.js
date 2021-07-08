@@ -1,4 +1,4 @@
-import React, { Component} from "react";
+import React, { Component } from "react";
 import API from "../../utils/API";
  
 class SignUp extends Component {
@@ -53,33 +53,31 @@ class SignUp extends Component {
 
     render() {
         return (
-            <form onSubmit={this.handleSubmit}>
-                <div className="jumbotron">Signup</div>
+            <form name = "signup" onSubmit={this.handleSubmit}>
+                <div className="jumbotron mt-5">Signup</div>
 
-                <div className="form-group">
+                <div className="form-group mb-4">
                     <label>First name</label>
                     <input type="text" className="form-control" name = "first_name" placeholder="First name" onChange={this.handleFirstName} />
                 </div>
 
-                <div className="form-group">
+                <div className="form-group mb-4">
                     <label>Last name</label>
                     <input type="text" className="form-control" name = "last_name" placeholder="Last name" onChange={this.handleLastName} />
                 </div>
 
-                <div className="form-group">
+                <div className="form-group mb-4">
                     <label>Email</label>
                     <input type="email" className="form-control" name = "email" placeholder="Enter email" onChange={this.handleEmail}/>
                 </div>
 
-                <div className="form-group">
+                <div className="form-group mb-4">
                     <label>Password</label>
                     <input type="password" className="form-control" name = "password" placeholder="Enter password" onChange={this.handlePassword} />
                 </div>
 
                 <button type="submit" className="btn btn-dark btn-lg btn-block" >Register</button>
-                <p className="forgot-password text-right">
-                    Already signed up? <a href="/login">login?</a>
-                </p>
+
             </form>
         );
     }

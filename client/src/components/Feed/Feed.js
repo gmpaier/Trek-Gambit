@@ -6,11 +6,11 @@ import Cookies from "js-cookie";
 
 const Feed = props => {
     console.log(props); 
-    return (props.visits.length === 0) ? (
+    return !Cookies.get("id") && (props.visits.length === 0) ? (
         <div className="card">
         <div className="card-body player">
             <div className="article">
-                <h3>Nothing to Display, get some friends!</h3>
+                <h3>Nothing to Display</h3>
             </div>
         </div>
     </div>
@@ -18,11 +18,11 @@ const Feed = props => {
         <Container fluid>
             <div className="card">
                 <div className="card-body">
-                    <Row>
+                <Row>
                         <Col size = "4" ></Col>
                         <Col size = "16">
                         {props.visits.map(visit => {
-                                    return (
+                                    return Cookies.get("id") && (
                                         <div size = "12" className = "post-bg rounded-3 p-1 border mb-3">
 
                                         {/* Post Header */}
