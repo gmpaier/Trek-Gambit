@@ -1,5 +1,6 @@
 const router = require('express').Router();
-const { Visit} = require('../../models');
+const { Visit, User} = require('../../models');
+const sequelize = require('sequelize');
 
 router.get("/", async (req, res) => {
   try {
@@ -38,6 +39,43 @@ router.get("/park/:id", async (req, res) => {
 router.get("/myVisits", async (req, res) => {
   try {
     const visitData = await Visit.findAll({where: { user_id: req.session.user_id}});
+    const visits = visitData.map((visit) => visit.get({ plain: true }));
+    res.status(200).json(visits);
+  }
+  catch (err) {
+    res.status(400).json(err);
+  }
+});
+
+router.get("/byUser", async (req, res) => {
+  try {
+    const countData = await User.findAll({
+      attributes: { 
+        include: [[Sequelize.fn("COUNT", Sequelize.col("visit.id")), "visitCount"]] 
+    },
+    include: [{
+        model: Visit, attributes: []
+    }],
+  });
+    const counts = countData.map((user) => user.get({ plain: true }));
+    res.status(200).json(counts);
+  }
+  catch (err) {
+    res.status(400).json(err);
+  }
+});
+
+router.get("/byPark", async (req, res) => {
+  try {
+    console.log("in By Park")
+    const visitData = await Visit.findAll({
+      attributes: [
+        'park',
+        [sequelize.fn('COUNT', sequelize.col('id')), 'visitCount']
+      ],
+      group: ['park'] 
+  });
+    console.log("through visits")
     const visits = visitData.map((visit) => visit.get({ plain: true }));
     res.status(200).json(visits);
   }
