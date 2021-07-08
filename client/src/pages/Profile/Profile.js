@@ -13,18 +13,18 @@ class Profile extends Component {
     };
 
     componentDidMount() {
-        console.log(this.state.id);
-    API.getMyVisits()
-    .then(res => {
-        if (res.data.data === "error") {
-            throw new Error(res.data.data);
-        }
-        else {
-            this.setState({ savedVisits: res.data})
-            console.log(this.state.savedVisits)
+        let id = this.state.id
+        API.getMyVisits(id)
+        .then(res => {
+            if (res.data.data === "error") {
+                throw new Error(res.data.data);
             }
-        })
-        .catch(err => console.log(err))
+            else {
+                this.setState({ savedVisits: res.data})
+                console.log(this.state.savedVisits)
+                }
+            })
+            .catch(err => console.log(err))
     }
 
 render() {

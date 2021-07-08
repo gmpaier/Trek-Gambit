@@ -5,7 +5,7 @@ const sequelize = require('sequelize');
 
 router.get("/", async (req, res) => {
   try {
-    const visitData = await Visit.findAll({});
+    const visitData = await Visit.findAll({ include: User });
     const visits = visitData.map((visit) => visit.get({ plain: true }));
     res.status(200).json(visits);
   }
@@ -37,10 +37,14 @@ router.get("/park/:id", async (req, res) => {
   }
 });
 
-router.get("/myVisits", async (req, res) => {
+router.get("/myVisits/:id", async (req, res) => {
   try {
-    // console.log(req.params)
-    const visitData = await Visit.findAll({where: { user_id: req.params.id}});
+    console.log("req.body: "+ req.params.id)
+    const visitData = await Visit.findAll({
+      include: User,
+      where: {
+        user_id: req.params.id
+      }});
     const visits = visitData.map((visit) => visit.get({ plain: true }));
     res.status(200).json(visits);
   }

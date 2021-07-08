@@ -28,10 +28,10 @@ const Feed = props => {
                                         {/* Post Header */}
                                         <Row >
                                             <Col size = "12">
-                                            <h1 className = "text-white text-center p-2 postTitle">{Cookies.get("name") + ' ' + Cookies.get("last_name")}</h1>
+                                            <h1 className = "text-white text-center p-2 postTime">{visit.user.first_name} {visit.user.last_name}</h1>
                                             </Col>
                                             <Col size = "12">
-                                            <h1 className = "text-center text-white p-2 postTime">Posted: {visit.date}</h1>   
+                                            <h1 className = "text-center text-white p-2 postTitle">Posted: {visit.date}</h1>   
                                             </Col>
                                         </Row>
         

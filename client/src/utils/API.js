@@ -43,8 +43,8 @@ export default {
   getVisits: function() {
     return axios.get(host + "/api/visits");
   },
-  getMyVisits: function() {
-    return axios.get(host + "/api/visits/myVisits", {id: Cookies.get("id")});
+  getMyVisits: function(id) {
+    return axios.get(host + "/api/visits/myVisits/" + id);
   },
   getCountByUser: function() {
     return axios.get(host + "/api/visits/byUser");
