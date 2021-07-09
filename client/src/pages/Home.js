@@ -17,8 +17,8 @@ class Home extends Component {
             throw new Error(res.data.data);
         }
         else {
-            this.setState({ savedVisits: res.data})
-            console.log(this.state.savedVisits)
+            this.setState({ savedVisits: res.data.reverse()})
+            console.log(this.state.savedVisits.reverse())
             }
         })
         .catch(err => console.log(err))
