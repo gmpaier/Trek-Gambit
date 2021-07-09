@@ -1,6 +1,5 @@
 import React, { Component } from "react";
 import { Container } from "../../components/Grid";
-import "./Development.css";
 import developmentImage from "../../img/dev.jpg";
 
 

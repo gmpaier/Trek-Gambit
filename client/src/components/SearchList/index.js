@@ -1,6 +1,5 @@
 import React from "react";
 import { Row, Col } from "../Grid";
-import "./SearchList.css";
 
 const SearchList = props => {
 

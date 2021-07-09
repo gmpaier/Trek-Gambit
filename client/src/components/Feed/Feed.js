@@ -1,5 +1,4 @@
 import React from "react";
-import "./Feed.css"
 import { Container, Col, Row } from "../Grid";
 import Cookies from "js-cookie";
 // import PostComment from "../Comment/Comment";
