@@ -55,7 +55,7 @@ If you would like to contribute to this project feel free to send requests.  I o
 
 If you have any questions about the application, be sure to contact us at our emails 
 [Sean](mailto:smonagha@conncoll.edu)
-[Jarret]
+[Jarret](mailto:jarretebarnett@gmail.com)
 [Neel](mailto:neel.sheth109@gmail.com)
 [Griffen]
 
