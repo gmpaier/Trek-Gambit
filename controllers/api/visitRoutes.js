@@ -81,7 +81,7 @@ router.get("/byPark", async (req, res) => {
       ],
       group: ['park'],
       order: [
-        [sequelize.fn('COUNT', sequelize.col('id')), 'asc']
+        [sequelize.fn('COUNT', sequelize.col('id')), 'desc']
       ] 
   });
     const visits = visitData.map((visit) => visit.get({ plain: true }));
