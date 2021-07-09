@@ -1,5 +1,4 @@
 import React, { useEffect, useState } from "react";
-import "./style.css";
 import { NavLink } from "react-router-dom";
 import API from "../../utils/API";
 import Cookies from "js-cookie"

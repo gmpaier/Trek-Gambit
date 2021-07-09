@@ -1,6 +1,5 @@
-import React, { useState} from "react";
+import React, { useState } from "react";
 import API from "../../utils/API";
-import "./style.css";
 import Cookies from "js-cookie"
 
 const Login = props => {
