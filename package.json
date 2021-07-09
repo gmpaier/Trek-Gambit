@@ -1,7 +1,7 @@
 {
-  "name": "booksearch",
+  "name": "trekgambit",
   "version": "1.0.0",
-  "description": "React Book Search",
+  "description": "Trek Gambit",
   "main": "server.js",
   "scripts": {
     "start": "if-env NODE_ENV=production && npm run start:prod || npm run start:dev",
@@ -11,6 +11,10 @@
     "install": "cd client && npm install",
     "build": "cd client && npm run build",
     "heroku-postbuild": "npm run build"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://https://github.com/gmpaier/project-3.git"
   },
   "author": "",
   "license": "ISC",
