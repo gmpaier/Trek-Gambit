@@ -83,7 +83,7 @@ p.text-center {
 
 div.card {
   background-color: #212925;
-  opacity: 78%;
+  /* opacity: 78%; */
 }
 
 div.jumbotron {
@@ -197,7 +197,7 @@ a.nav-link:hover {
 
 li.card-list {
   background-color: #212925;
-  opacity: 78%;
+  /* opacity: 78%; */
 }
 
 #parkName {
@@ -214,12 +214,12 @@ textarea {
 
 .halfvisit {
   background-color: #212925;
-  opacity: 78%;
+  /* opacity: 78%; */
 }
 
 .half {
   background-color: #212925;
-  opacity: 78%;
+  /* opacity: 78%; */
 }
 
 .signup {
