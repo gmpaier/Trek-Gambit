@@ -260,6 +260,11 @@ li.card-list {
   /* opacity: 78%; */
 }
 
+.searchbg {
+  background-color: #212925;
+  opacity: 80%;
+}
+
 #parkName {
   text-align: center;
   font-family: 'Amatic SC';

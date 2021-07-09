@@ -46,7 +46,7 @@ class SignUp extends Component {
             email: this.state.email
         })
         .then(res=>console.log(res))
-        .then(alert("You have been successfully logged in!"))
+        .then(alert("You have been successfully signed up!"))
         .catch(err=> console.log(err))
     }
 
