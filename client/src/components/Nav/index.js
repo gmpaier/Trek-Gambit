@@ -4,10 +4,6 @@ import { NavLink } from "react-router-dom";
 import API from "../../utils/API";
 import Cookies from "js-cookie"
 
-
-
-
-
 function Nav() {
 
     const [parkCode, setParkCode] = useState()
@@ -65,14 +61,14 @@ function Nav() {
               >
                 Random
               </NavLink>}
-
+{/* 
               {Cookies.get("id") &&<NavLink 
               to = "/compare"
               className = "nav-link"
               >
                 Park Or Not
               </NavLink>}
-              
+               */}
               <NavLink 
               to = "/leaderboard"
               className = "nav-link"

@@ -1,6 +1,5 @@
 import React, { Component } from "react";
 import { Container, Row, Col} from "../../components/Grid";
-import "./Compare.css";
 import ParkInfo from "../../components/ParkInfo/ParkInfo"
 
 
