@@ -26,36 +26,36 @@ export default {
 
   // Gets the park with the given id
   getPark: function(id) {
-    return axios.get("/api/parks/" + id);
+    return axios.get(host + "/api/parks/" + id);
   },
   // Deletes the park with the given id
   deletePark: function(id) {
-    return axios.delete("/api/park/" + id);
+    return axios.delete(host + "/api/park/" + id);
   },
   // Saves a park to the database
   savePark: function(parkData) {
-    return axios.post("/api/parks", parkData);
+    return axios.post(host + "/api/parks", parkData);
   },
   saveVisit: function(visit) {
-    return axios.post("/api/visits", visit);
+    return axios.post(host + "/api/visits", visit);
   },
   getVisits: function() {
-    return axios.get("/api/visits");
+    return axios.get(host + "/api/visits");
   },
   getMyVisits: function(id) {
-    return axios.get("/api/visits/myVisits/" + id);
+    return axios.get(host + "/api/visits/myVisits/" + id);
   },
   getCountByUser: function() {
-    return axios.get("/api/visits/byUser");
+    return axios.get(host + "/api/visits/byUser");
   },
   getCountByPark: function() {
-    return axios.get("/api/visits/byPark");
+    return axios.get(host + "/api/visits/byPark");
   },
   signup: function(user) {
-    return axios.post("/api/users/signup", user, {withCredentials: true});
+    return axios.post(host + "/api/users/signup", user, {withCredentials: true});
   },
   login: function(user) {
-    return axios.post("/api/users/login", user, {withCredentials: true});
+    return axios.post(host + "/api/users/login", user, {withCredentials: true});
   }
   // getLeadBoard: function() {
   //   return axios.get("/api/leaderboard");
