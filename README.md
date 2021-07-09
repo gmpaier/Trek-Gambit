@@ -54,7 +54,10 @@ If you would like to contribute to this project feel free to send requests.  I o
 ### Questions
 
 If you have any questions about the application, be sure to contact us at our emails 
-[e-mail](mailto:smonagha@conncoll.edu)
+[Sean](mailto:smonagha@conncoll.edu)
+[Jarret]
+[Neel](mailto:neel.sheth109@gmail.com)
+[Griffen]
 
 Alternatively you can find us and our other works at our 
-[Github account](https://github.com/seanmonaghan).
+[Seans Github account](https://github.com/seanmonaghan).
