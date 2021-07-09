@@ -1,7 +1,5 @@
 import React from "react";
 import { Row } from "../Grid";
-import "./ParkInfo.css";
-
 
 const ParkInfo = props => {
 

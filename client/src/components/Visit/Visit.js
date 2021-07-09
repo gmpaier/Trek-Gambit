@@ -1,6 +1,5 @@
 import React, {useState} from "react";
 import API from "../../utils/API";
-import "./visit.css";
 import Cookies from "js-cookie";
 
 const Visit = props => {

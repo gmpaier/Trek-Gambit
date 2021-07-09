@@ -2,7 +2,6 @@ import React, { useEffect, useState } from "react";
 import API from "../../utils/API";
 // import { useTable, useSortBy } from "react-table";
 import { Container, Row, Col } from "../Grid";
-import "./style.css";
 
 export const LeadTable = (props) => {
  
