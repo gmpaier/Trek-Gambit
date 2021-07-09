@@ -22,8 +22,8 @@ const SearchList = props => {
                         {props.parks.map(park => {
                            return (
                                 <div className = "article">
-                                    <li className="card-list searchbg rounded-3">
-                                      <Row className="SearchResult row" id={park.id + "Card"} key={park._id}>
+                                    <li className="card-list  rounded-3">
+                                      <Row className="SearchResult searchbg row" id={park.id + "Card"} key={park._id}>
                                             <Row>
                                                 <h3 className="parkFullname text-center">{park.fullName}</h3>
                                             </Row>
