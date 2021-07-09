@@ -33,13 +33,13 @@ No need to install this application, it is live via Heroku and the link posted a
 ## Site Overview
 Upon opening the site you are sent to a splash page where you will need to sign in or log in if you already created an account. Once logged in you will have the ability to search for any national park by simply typing in the name of the park or state that it's located in. When you search you will see the name, a picutur and brief description of the park as well as links to view the park page or go to the park website. The park page displays a description, price to enter, address, weather info, operating hours and contact information. Additionaly, on the park page you can create a profile which will allow you to post about a visit you had as well as rate the park. That post will be displayed on the home page where you can view other users posts about various other national parks that were visited.
 
-![screenshot of home page](src/img/homePage.png)
+![screenshot of home page](client/src/img/homePage.png)
 ![screenshot of search page]()
-![screenshot of park page](src/img/parkPage.png)
+![screenshot of park page](client/src/img/parkPage.png)
 
 The profile page will show you all of the posts you have made and if youre feeling spontaneous you can go to the random page that will display a random park if you need any inspiration for your next trip. The leaderboard page will display which user has the most visits and miles walked/biked/run etc. 
 
-![screenshot of Leaderboard](src/img/leaderboardPage.png)
+![screenshot of Leaderboard](client/src/img/leaderboardPage.png)
   
 ## License
 
@@ -54,8 +54,10 @@ If you would like to contribute to this project feel free to send requests.  I o
 ### Questions
 
 If you have any questions about the application, be sure to contact us at our emails 
-[e-mail](mailto:smonagha@conncoll.edu)
-[e-mail](mailto:neel.sheth109@gmail.com).
+[Sean](mailto:smonagha@conncoll.edu)
+[Jarret](mailto:jarretebarnett@gmail.com)
+[Neel](mailto:neel.sheth109@gmail.com)
+[Griffen]
 
 Alternatively you can find us and our other works at our 
-[Github account](https://github.com/seanmonaghan).
+[Seans Github account](https://github.com/seanmonaghan).
