@@ -94,19 +94,23 @@ div.jumbotron {
   color: snow;
 }
 
-div.container-fluid {
+img {
+  width: 100%
+}
+
+/* div.container-fluid {
   display: flex;
   flex-direction: row;
   justify-content: space-around;
   flex-flow: column;
-}
+} */
 
-div.row-col-auto {
+/* div.row-col-auto {
   display: inline-flex;
   flex-direction: row;
   justify-content: space-around;
   flex-flow: wrap;
-}
+} */
 
 .form-group {
   font-family: 'Amatic SC';
@@ -129,12 +133,12 @@ p {
   color: snow;
 }
 
-div.container {
+/* div.container {
   display: flex;
   flex-direction: row;
   justify-content: space-around;
   flex-flow: column;
-}
+} */
 
 div.row {
   display: flex;
