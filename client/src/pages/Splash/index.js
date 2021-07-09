@@ -14,11 +14,11 @@ function Splash() {
             </div>
             <br />
             <h2>
-                Welcome to...
+                A platform for explorers to exchange their experiences.
             </h2>
             <br />
             <div className="row-col-auto">
-                <a href="Login" className="signup" type="button">Login | Sign-Up</a>
+                <a href="Login" className="signup" type="button">Login | Signup</a>
             </div>
         </div>
     )
