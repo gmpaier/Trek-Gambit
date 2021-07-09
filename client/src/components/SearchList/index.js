@@ -13,17 +13,17 @@ const SearchList = props => {
             </div>
         </div>
     ) : (
-            <div className="card-main">
-                <div className="card-body player">
+            <div className="">
+                <div className=" player">
                     <div className="article">
 
 
-                        <h3 className = "text-white text-center">Parks Found</h3>
+                        <h2 className = "text-white text-center">Parks Found</h2>
                         {props.parks.map(park => {
                            return (
-                                <div className = "article card-list">
-                                    <li className="card-list searchbg rounded-3">
-                                      <Row className="SearchResult  row" id={park.id + "Card"} key={park._id}>
+                                <div className = "article card">
+                                    <li className="card-body searchbg rounded-3">
+                                      <Row className="SearchResult row" id={park.id + "Card"} key={park._id}>
                                             <Row>
                                                 <h3 className="parkFullname text-center">{park.fullName}</h3>
                                             </Row>
