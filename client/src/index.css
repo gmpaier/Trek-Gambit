@@ -225,8 +225,6 @@ a.nav-link {
   font-size: 2rem;
 }
 
-
-
 a.navbar-brand:hover {
   transform: scale(1.15);
 }
@@ -257,7 +255,7 @@ a.nav-link:hover {
 
 li.card-list {
   background-color: #212925;
-  /* opacity: 78%; */
+
 }
 
 .searchbg {
