@@ -94,6 +94,10 @@ div.jumbotron {
   color: snow;
 }
 
+.loginSpan {
+  text-align: center;
+}
+
 img {
   width: 100%
 }
@@ -153,6 +157,11 @@ nav.navbar {
   z-index: 1;
 }
 
+.btn {
+  display:block;
+  width: 100%;
+}
+
 a.navbar-brand {
   font-family: 'Amatic SC';
   /* opacity: 89%; */
@@ -164,8 +173,10 @@ a.nav-link {
   color: snow;
   font-weight: bold;
   text-decoration: snow;
-  font-size: 2rem
+  font-size: 2rem;
 }
+
+
 
 a.navbar-brand:hover {
   transform: scale(1.15);

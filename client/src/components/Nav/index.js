@@ -28,8 +28,8 @@ function Nav() {
 
     return (
       <nav className="navbar navbar-expand-lg navbar-dark bg-dark" style={{ opacity: 93 }}>
-        <div className="container">
-          <div className="row-cols-auto">
+        <div className="container navAlign">
+          <div className="row-cols-auto navAlign">
             <div className="navbar" id="navbarNav">
               <NavLink 
               to = "/home"

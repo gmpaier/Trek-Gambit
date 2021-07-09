@@ -16,7 +16,7 @@ function Splash() {
                 A platform for explorers to exchange their experiences.
             </h2>
             <br />
-            <div className="row-col-auto">
+            <div className="row-col-auto loginSpan">
                 <a href="Login" className="signup" type="button">Login | Signup</a>
             </div>
         </div>
