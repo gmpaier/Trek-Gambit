@@ -55,7 +55,7 @@ const SearchList = props => {
                                                 </button>
                                             </Col>
                                             <Col size = "6" className = "text-center">
-                                                <a href={'/park/?parkCode=' + park.parkCode} >
+                                                <a href={'/park/?parkCode=' + park.parkCode} className = "text-decoration-none" >
                                                     <button className = "btn btn-dark btn-lg text-center text-decoration-none text-reset"> 
                                                         View Park Page
                                                     </button>
