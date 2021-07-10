@@ -1,5 +1,7 @@
 import React, { Component } from "react";
 import API from "../../utils/API";
+import { ToastContainer, toast} from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
  
 class SignUp extends Component {
 
@@ -46,7 +48,7 @@ class SignUp extends Component {
             email: this.state.email
         })
         .then(res=>console.log(res))
-        .then(alert("You have been successfully signed up!"))
+        .then(toast("You have been successfully signed up!"))
         .catch(err=> console.log(err))
     }
 
@@ -55,8 +57,9 @@ class SignUp extends Component {
     render() {
         return (
             <form name = "signup" onSubmit={this.handleSubmit}>
+                
                 <div className="jumbotron mt-5">Signup</div>
-
+                <ToastContainer />
                 <div className="form-group mb-4">
                     <label>First name</label>
                     <input type="text" className="form-control" name = "first_name" placeholder="First name" onChange={this.handleFirstName} />
@@ -80,6 +83,7 @@ class SignUp extends Component {
                 <button type="submit" className="btn btn-dark btn-lg btn-block" >Register</button>
 
             </form>
+            
         );
     }
 }
