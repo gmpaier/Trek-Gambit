@@ -53,6 +53,8 @@ const Visit = props => {
           rating: rating,
           image: props.images[0].url
         })
+        .then(alert("Your post has been successfully posted!"))
+        .then(window.location.href = "/home")
         .then(res => console.log(res))
         .catch(err => console.log(err))
     }
