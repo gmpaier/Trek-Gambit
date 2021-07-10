@@ -1,6 +1,8 @@
 import React, {useState} from "react";
 import API from "../../utils/API";
 import Cookies from "js-cookie";
+import { ToastContainer, toast} from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 
 const Visit = props => {
     
@@ -53,8 +55,8 @@ const Visit = props => {
           rating: rating,
           image: props.images[0].url
         })
-        .then(alert("Your post has been successfully posted!"))
-        .then(window.location.href = "/home")
+        .then(toast("Thanks for the post!"))
+        // .then(window.location.href = "/home")
         .then(res => console.log(res))
         .catch(err => console.log(err))
     }
@@ -62,6 +64,7 @@ const Visit = props => {
     return (
         <div id = "half">
             <br />
+            <ToastContainer />
         <form>
             <div className="form-group halfvisit rounded-3 p-1">
 
