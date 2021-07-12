@@ -26,7 +26,7 @@ INSERT POWERPOINT LINK
 
 ## Installation Instructions
 
-INSERT DEPLOYED APP LINK
+https://quiet-harbor-96544.herokuapp.com/
 
 No need to install this application, it is live via Heroku and the link posted above.  
 
@@ -57,7 +57,5 @@ If you have any questions about the application, be sure to contact us at our em
 [Sean](mailto:smonagha@conncoll.edu)
 [Jarret](mailto:jarretebarnett@gmail.com)
 [Neel](mailto:neel.sheth109@gmail.com)
-[Griffen]
+[Griffin](https://github.com/gmpaier/)
 
-Alternatively you can find us and our other works at our 
-[Seans Github account](https://github.com/seanmonaghan).
