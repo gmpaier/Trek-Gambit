@@ -20,10 +20,6 @@ This application is designed to help you search for any national park and obtain
 
 https://www.nps.gov/subjects/developer/api-documentation.htm
 
-Link to the Power point Presentation: 
-
-INSERT POWERPOINT LINK
-
 ## Installation Instructions
 
 https://quiet-harbor-96544.herokuapp.com/
