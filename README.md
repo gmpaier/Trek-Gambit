@@ -20,13 +20,9 @@ This application is designed to help you search for any national park and obtain
 
 https://www.nps.gov/subjects/developer/api-documentation.htm
 
-Link to the Power point Presentation: 
-
-INSERT POWERPOINT LINK
-
 ## Installation Instructions
 
-INSERT DEPLOYED APP LINK
+https://quiet-harbor-96544.herokuapp.com/
 
 No need to install this application, it is live via Heroku and the link posted above.  
 
@@ -34,7 +30,7 @@ No need to install this application, it is live via Heroku and the link posted a
 Upon opening the site you are sent to a splash page where you will need to sign in or log in if you already created an account. Once logged in you will have the ability to search for any national park by simply typing in the name of the park or state that it's located in. When you search you will see the name, a picutur and brief description of the park as well as links to view the park page or go to the park website. The park page displays a description, price to enter, address, weather info, operating hours and contact information. Additionaly, on the park page you can create a profile which will allow you to post about a visit you had as well as rate the park. That post will be displayed on the home page where you can view other users posts about various other national parks that were visited.
 
 ![screenshot of home page](client/src/img/homePage.png)
-![screenshot of search page]()
+
 ![screenshot of park page](client/src/img/parkPage.png)
 
 The profile page will show you all of the posts you have made and if youre feeling spontaneous you can go to the random page that will display a random park if you need any inspiration for your next trip. The leaderboard page will display which user has the most visits and miles walked/biked/run etc. 
@@ -57,7 +53,5 @@ If you have any questions about the application, be sure to contact us at our em
 [Sean](mailto:smonagha@conncoll.edu)
 [Jarret](mailto:jarretebarnett@gmail.com)
 [Neel](mailto:neel.sheth109@gmail.com)
-[Griffen]
+[Griffin](https://github.com/gmpaier/)
 
-Alternatively you can find us and our other works at our 
-[Seans Github account](https://github.com/seanmonaghan).
